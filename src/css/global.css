@@ -1,2 +1,5 @@
 @import url('./settings.css');
 @import url('./generics.css');
+
+/* Components */
+@import url('./components/navbar.css');
