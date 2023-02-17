@@ -1,0 +1,11 @@
+.navbar a {
+  color: inherit;
+}
+
+.navbar__brand a {
+  text-decoration: none;
+}
+
+.navbar__brand a:hover {
+  text-decoration: underline;
+}
