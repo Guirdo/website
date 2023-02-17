@@ -2,7 +2,7 @@
   height: calc(100vh - (var(--s-xlg) + var(--s-xs)));
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   gap: var(--s-xlg);
   align-self: center;
@@ -44,7 +44,6 @@
   flex-direction: column;
   justify-content: center;
   font-size: var(--s-md);
-  margin-top: auto;
   gap: var(--s-xs);
 }
 
