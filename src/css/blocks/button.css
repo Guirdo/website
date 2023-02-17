@@ -1,0 +1,8 @@
+.button {
+  padding: calc(var(--s-xs)/4) calc(var(--s-xs)/2);
+}
+
+.button[data-type="primary"] {
+  background-color: var(--primary);
+  color: var(--white);
+}

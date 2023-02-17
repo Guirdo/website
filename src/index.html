@@ -4,27 +4,23 @@ title: Guirdo
 description: "Welcome to my site"
 ---
 
-<section class="hero">
-  <div class="hero-profile">
+<section class="[ hero ] [ flex-column ] [ gap-xlg align-items-center padding-xlg justify-content-evenly ]">
+  <div class="[ hero-profile ] [ gap-lg align-items-center ]">
     <img
-      class="hero-photo"
+      class="[ hero-photo ] [ box-shadow-blur border-radius-50 ]"
       src="{{ 'https://res.cloudinary.com/dyuo7wfyi/image/upload/v1676650083/website/profile.jpg' | url }}" 
       alt="Seb Méndez"
     >
 
     <h1 class="hero__title">Hey, there! I'm Seb Méndez</h1>
-    <p class="hero__text">A front-end developer who brings good-looking web designs to life</p>
+    <p class="[ hero__text ] [ fs-lg ]">A front-end developer who brings good-looking web designs to life</p>
 
     <button
-      class="hero__button"
+      class="[ button ] [fw-bold fs-md ]"
+      data-type="primary"
     >
       Contact me!
     </button>
-  </div>
-
-  <div class="hero-next-section">
-    <span>About me</span>
-    <div></div>
   </div>
 </section>
 

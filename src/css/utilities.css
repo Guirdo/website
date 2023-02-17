@@ -2,6 +2,10 @@
   padding: var(--s-xs);
 }
 
+.padding-xlg {
+  padding: var(--s-xlg);
+}
+
 .bg-primary {
   background-color: var(--primary);
 }
@@ -18,8 +22,20 @@
   box-shadow: var(--shadow) 0px 5px 15px;
 }
 
+.gap-xs {
+  gap: var(--s-xs);
+}
+
 .gap-sm {
   gap: var(--s-sm);
+}
+
+.gap-lg {
+  gap: var(--s-lg);
+}
+
+.gap-xlg {
+  gap: var(--s-xlg);
 }
 
 .list-style-none {
@@ -30,10 +46,26 @@
   align-items: center;
 }
 
+.fs-md {
+  font-size: var(--s-md);
+}
+
 .fs-lg {
   font-size: var(--s-lg);
 }
 
 .mi-end-auto {
   margin-inline-end: auto;
+}
+
+.justify-content-evenly {
+  justify-content: space-evenly;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.border-radius-50 {
+  border-radius: 50%;
 }
