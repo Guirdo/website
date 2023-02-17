@@ -1,6 +1,6 @@
-@import url('./settings.css');
-@import url('./generics.css');
-@import url('./elements.css');
+@import './settings.css';
+@import './generics.css';
 
-/* Components */
-@import url('./components/navbar.css');
+@import './composition.css';
+@import './utilities.css';
+@import './blocks/index.css';

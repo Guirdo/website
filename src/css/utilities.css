@@ -1,0 +1,39 @@
+.padding-xs {
+  padding: var(--s-xs);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.text-white {
+  color: var(--white);
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.box-shadow-blur  {
+  box-shadow: var(--shadow) 0px 5px 15px;
+}
+
+.gap-sm {
+  gap: var(--s-sm);
+}
+
+.list-style-none {
+  list-style: none;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.fs-lg {
+  font-size: var(--s-lg);
+}
+
+.mi-end-auto {
+  margin-inline-end: auto;
+}
