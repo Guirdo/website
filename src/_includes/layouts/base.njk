@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
   {% include "baseHead.njk" %}
+  {% block pageStyles %}{% endblock %}
 </head>
 <body>
   {% include "navbar.html" %}
-  {{ content | safe }}
+  <main>
+    {{ content | safe }}
+  </main>
 </body>
 </html>
