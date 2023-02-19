@@ -1,7 +1,6 @@
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addWatchTarget('src/css/')
+  eleventyConfig.addPlugin(require('./config/template-languages/css-config.js'));
 
-  eleventyConfig.addPassthroughCopy('src/css/')
   return {
     dir: {
       markdownTemplateEngine: 'njk',

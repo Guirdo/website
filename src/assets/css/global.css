@@ -3,4 +3,4 @@
 
 @import './composition.css';
 @import './utilities.css';
-@import './blocks/index.css';
+@import-glob './blocks/*.css';
