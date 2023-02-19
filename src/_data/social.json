@@ -1,0 +1,26 @@
+[
+  {
+    "platform": "Email",
+    "url": "mailto:aldo.seb.mendez@gmail.com",
+    "icon": "mail.svg",
+    "label": "Let's chat!"
+  },
+  {
+    "platform": "Github",
+    "url": "https://github.com/Guirdo",
+    "icon": "github.svg",
+    "label": "Check out my code"
+  },
+  {
+    "platform": "LinkedIn",
+    "url": "https://www.linkedin.com/in/seb-mendez/",
+    "icon": "linkedin.svg",
+    "label": "Let's connect"
+  },
+  {
+    "platform": "Mastodon",
+    "url": "https://mstdn.mx/@guirdo",
+    "icon": "mastodon.svg",
+    "label": "Follow me on Mastodon"
+  }
+]
