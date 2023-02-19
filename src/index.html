@@ -23,7 +23,7 @@ templateEngineOverride: njk
 <section class="[ about-me ] [ flex-column ] [ gap-lg ]">
   <h2 class="about-me__title fs-xlg">About me</h2>
 
-  <div class="[ about-me-rectangle ] [ flex-column ] [ gap-lg bg-primary padding-xlg text-white fs-sm ]">
+  <div class="[ about-me-rectangle ] [ flex-column ] [ box-shadow-blur gap-lg bg-primary padding-xlg text-white fs-sm ]">
     <p>
       I’m a front-end developer, I’m from Mexico and I finished a degree in computational system engineering.
     </p>
@@ -42,12 +42,12 @@ templateEngineOverride: njk
   </div>
 </section>
 
-<section class="[ project-section ] [ flex-column ] [ padding-xlg gap-lg ]">
-  <h2 class="[ project-section__title ] [ mi-start-auto fs-xlg ]">Projects</h2>
+<section class="[ project-section ] [ flex-column ] [ bg-primary text-white padding-xlg gap-lg mb-start-xlg ]">
+  <h2 class="[ project-section__title ] [ mi-start-auto mb-start-xlg fs-xlg ]">Projects</h2>
 
-  <div class="[ project-section-grid ] [ grid-column ] [ gap-xlg ]">
+  <div class="[ project-section-grid ] [ grid-column ] [ gap-xlg mb-end-xlg ]">
     {% for index in range(0,4) %}
-    <article class="[ project-card ] [ flex-column ] [ padding-xs gap-xs justify-content-center border-primary ]">
+    <article class="[ project-card ] [ flex-column ] [ padding-xs gap-xs justify-content-center bg-white text-dark box-shadow-blur ]">
       <img class="project-card__cover" src="https://picsum.photos/600/400" alt="Project name">
       <h3 class="project-card__title">Project name</h3>
 
@@ -56,7 +56,7 @@ templateEngineOverride: njk
         tempora esse dolorum eum nam omnis cumque non! Perferendis, explicabo! Amet dolores maiores cupiditate quae cum.
       </p>
 
-      <button class="button" data-type="secondary">
+      <button class="button fw-bold" data-type="secondary">
         Learn more
       </button>
     </article>
@@ -88,7 +88,7 @@ templateEngineOverride: njk
       </ul>
     </div>
 
-    <form class="[ flex-column ] [ border-primary padding-sm gap-sm ]">
+    <form class="[ flex-column ] [ box-shadow-blur border-primary padding-sm gap-sm ]">
       <div class="[ flex-column ] [ gap-xs ]">
         <label for="name">Your name</label>
         <input name="name" id="name">
