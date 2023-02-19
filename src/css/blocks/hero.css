@@ -1,5 +1,4 @@
 .hero {
-  /* height: calc(100vh - (var(--s-xlg) + var(--s-xs))); */
   height: 100%;
 }
 
@@ -10,7 +9,6 @@
     "title"
     "text"
     "button";
-  max-width: 90%;
   place-items: center;
 }
 
@@ -49,5 +47,6 @@
     "photo text"
     "photo button";
     text-align: center;
+    max-width: 80%;
   }
 }

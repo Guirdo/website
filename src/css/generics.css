@@ -60,8 +60,12 @@ main {
   align-items: center;
 }
 
-h1, h2 {
+h1 {
   font-size: var(--s-xlg);
+}
+
+h2 {
+  font-size: var(--s-lg);
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
