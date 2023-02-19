@@ -4,9 +4,11 @@
 .padding-xlg { padding: var(--s-xlg) }
 
 .bg-primary { background-color: var(--primary) }
+.bg-secondary { background-color: var(--secondary) }
 
 .text-primary { color: var(--primary) }
 .text-white { color: var(--white) }
+.text-inherit { color: inherit }
 
 .text-align-start { text-align: start }
 .text-align-center { text-align: center }
@@ -35,6 +37,7 @@
 .mi-start-auto { margin-inline-start: auto }
 .mi-end-auto { margin-inline-end: auto }
 
+.justify-content-between { justify-content: space-between }
 .justify-content-evenly { justify-content: space-evenly }
 .justify-content-center { justify-content: center }
 
