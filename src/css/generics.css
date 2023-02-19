@@ -68,6 +68,17 @@ h2 {
   font-size: var(--s-lg);
 }
 
+section { width: 100% }
+
+label { font-weight: bold }
+
+input { padding: calc(var(--s-xs) / 2) }
+
+textarea {
+  resize: none;
+  padding: calc(var(--s-xs) / 2);
+}
+
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
