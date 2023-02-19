@@ -2,6 +2,7 @@
 layout: layouts/base.njk
 title: Guirdo
 description: "Welcome to my site"
+templateEngineOverride: njk
 ---
 
 <section class="[ hero ] [ flex-column ] [ gap-xlg align-items-center padding-xlg justify-content-evenly ]">
@@ -25,12 +26,33 @@ description: "Welcome to my site"
 </section>
 
 <section class="[ about-me ] [ flex-column ] [ gap-lg ]">
-  <h2 class="about-me__title">About me</h2>
+  <h2 class="about-me__title fs-xlg">About me</h2>
 
   <div class="[ about-me-rectangle ] [ flex-column ] [ gap-lg bg-primary padding-xlg text-white fs-sm ]">
     <p>I’m a front-end developer, I’m from Mexico and I finished a degree in computational system engineering.</p>
     <p>I love web developing and internet because I can create something creative, beautiful and useful from scratch and share it to everyone easily with just a link.</p>
     <p>With my knowledge in front-end technologies and web design a I’ve help local businesses to be present in the internet. </p>
     <p>I’m passionate about creating good web pages for people, since I believe technology must be at our service and not the opposite.</p>
+  </div>
+</section>
+
+<section class="[ project-section ] [ flex-column ] [ padding-xlg gap-lg ]">
+  <h2 class="[ project-section__title ] [ mi-start-auto fs-xlg ]">Projects</h2>
+
+  <div class="[ project-section-grid ] [ grid-column ] [ gap-xlg ]">
+    {% for index in range(0,4) %}
+    <article class="[ project-card ] [ flex-column ] [ padding-xs gap-xs justify-content-center border-primary ]">
+      <img class="project-card__cover" src="https://picsum.photos/600/400" >
+      <h3 class="project-card__title">Project name</h3>
+
+      <p class="project-card__description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia delectus nemo rerum. Maiores reiciendis tempora esse dolorum eum nam omnis cumque non! Perferendis, explicabo! Amet dolores maiores cupiditate quae cum.
+      </p>
+
+      <button class="button" data-type="secondary">
+        Learn more
+      </button>
+    </article>
+  {% endfor %}
   </div>
 </section>
