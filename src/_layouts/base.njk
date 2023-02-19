@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  {% include "baseHead.njk" %}
-  {% block pageStyles %}{% endblock %}
+  {% include "partials/head.njk" %}
 </head>
 <body>
-  {% include "navbar.html" %}
+  {% include "partials/navbar.html" %}
   <main>
     {{ content | safe }}
   </main>
