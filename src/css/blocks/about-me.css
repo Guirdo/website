@@ -1,0 +1,14 @@
+.about-me {
+  padding-inline: 0 var(--s-xlg);
+  padding-block: var(--s-xlg);
+}
+
+.about-me__title {
+  margin-inline-start: var(--s-xlg);
+}
+
+.about-me-rectangle {
+  align-self: flex-start;
+  margin-right: var(--s-xlg);
+}
+
