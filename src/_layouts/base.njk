@@ -4,6 +4,7 @@
   {% include "partials/head.njk" %}
 </head>
 <body>
+  {% block hero %}{% endblock %}
   {% include "partials/navbar.html" %}
   <main>
     {{ content | safe }}

@@ -1,52 +1,20 @@
 .hero {
-  height: 100%;
+  --s: 10rem;
+
+  --_g: var(--secondary) 0 25%,#0000 0 50%;
+  background:
+   repeating-conic-gradient(at 33% 33%,var(--_g)),
+   repeating-conic-gradient(at 66% 66%,var(--_g)),
+   var(--primary); 
+  background-size: var(--s) var(--s); 
 }
 
-.hero-profile {
+.hero-presentation {
+  width: min(35rem, 100%);
   display: grid;
-  grid-template-areas: 
-    "photo"
-    "title"
-    "text"
-    "button";
-  place-items: center;
+  grid-template-columns: 1fr 1fr;
 }
 
-.hero-photo {
-  grid-area: photo;
-  max-width: 280px;
-  aspect-ratio: 1;
-}
-
-.hero__title {
-  grid-area: title;
-}
-
-.hero__text {
-  grid-area: text;
-}
-
-.hero__button {
-  grid-area: button;
-}
-
-.hero-next-section > div {
-  height: calc(5vh);
-  width: 0;
-  margin-inline: auto;
-  border: 1px solid black;
-}
-
-@media screen and (min-width: 1024px) {
-  .hero {
-    height: 100%;
-  }
-  .hero-profile {
-    grid-template-areas: 
-    "photo title"
-    "photo text"
-    "photo button";
-    text-align: center;
-    max-width: 80%;
-  }
-}
+.hero-welcome { grid-column: 1 / -1 }
+.hero-scroll-down { grid-column: 1 / 2 }
+.hero-contact { grid-column: 2 / -1 }
