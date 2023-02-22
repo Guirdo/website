@@ -3,6 +3,11 @@
 .padding-md { padding: var(--s-md) }
 .padding-xlg { padding: var(--s-xlg) }
 
+.h-100vh {
+  height: 100vh;
+  height: 100dvh;
+}
+
 .bg-primary { background-color: var(--primary) }
 .bg-secondary { background-color: var(--secondary) }
 .bg-white { background-color: var(--white) }
@@ -32,8 +37,11 @@
 
 .list-style-none { list-style: none }
 
+.align-items-start { align-items: start }
 .align-items-center { align-items: center }
 .align-items-end { align-items: flex-end }
+
+.align-self-end { align-self: flex-end }
 
 .fs-sm { font-size: var(--s-sm) }
 .fs-md { font-size: var(--s-md) }

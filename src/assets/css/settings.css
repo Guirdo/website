@@ -3,16 +3,16 @@
   --font: 'Inconsolata', monospace;
 
   /* Color */
-  --primary: #495B73;
-  --secondary: #402E24;
+  --primary: #3f4a3c;
+  --secondary: #a2af9f;
   --shadow: rgba(0, 0, 0, 0.35);
-  --white: #ffffff;
+  --white: #f4fcf1;
   --dark: #000000;
 
   /* Spacing */
-  --s-xs: 16px;
-  --s-sm: 20px;
-  --s-md: 28px;
-  --s-lg: 32px;
-  --s-xlg: 40px;
+  --s-xs: 1rem;
+  --s-sm: 1.25rem;
+  --s-md: 1.5rem;
+  --s-lg: 1.75rem;
+  --s-xlg: 2rem;
 }
