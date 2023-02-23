@@ -2,6 +2,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget('./src/assets');
   
   eleventyConfig.addPlugin(require('./config/template-languages/css-config.js'));
+  eleventyConfig.addPlugin(require('./config/template-languages/js-config.js'));
 
   eleventyConfig.addPassthroughCopy('src/assets/fonts/')
 
