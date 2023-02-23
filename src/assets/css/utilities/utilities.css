@@ -1,12 +1,8 @@
-.padding-xs { padding: var(--s-xs) }
-.padding-sm { padding: var(--s-sm) }
-.padding-md { padding: var(--s-md) }
-.padding-xlg { padding: var(--s-xlg) }
-
 .h-100vh {
   height: 100vh;
   height: 100dvh;
 }
+.w-90 { width: 90% }
 
 .bg-primary { background-color: var(--primary) }
 .bg-secondary { background-color: var(--secondary) }
@@ -21,9 +17,11 @@
 .text-align-center { text-align: center }
 .text-align-end { text-align: end }
 
+.text-decoration-none { text-decoration: none; }
+
 .fw-bold { font-weight: bold }
 
-.box-shadow-blur  { box-shadow: var(--shadow) 0px 5px 15px }
+.box-shadow-blur  { box-shadow: 0px 5px 15px var(--shadow) }
 
 .gap-xs { gap: var(--s-xs) }
 .gap-sm { gap: var(--s-sm) }
@@ -51,6 +49,7 @@
 .mi-start-auto { margin-inline-start: auto }
 .mi-end-auto { margin-inline-end: auto }
 .mi-auto { margin-inline: auto }
+.mi-xlg { margin-inline: var(--s-xlg) }
 
 .mb-start-xlg { margin-block-start: var(--s-xlg) }
 .mb-end-xlg { margin-block-end: var(--s-xlg) }
@@ -63,3 +62,32 @@
 
 .border-primary { border: 2px solid var(--primary) }
 .border-white { border: 2px solid var(--white) }
+.no-border { border: none }
+.no-background { background:none }
+
+.visible { 
+  visibility: visible; 
+  opacity: 1;
+}
+
+.invisible {
+  visibility: hidden; 
+  opacity: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .lg-visible {
+    visibility: visible; 
+    opacity: 1;
+  }
+
+  .lg-invisible {
+    visibility: hidden; 
+    opacity: 0;
+  }
+
+  .lg-display-none { display: none }
+  .lg-box-shadow-none { box-shadow: none }
+
+  .lg-justify-content-end { justify-content: flex-end }
+}

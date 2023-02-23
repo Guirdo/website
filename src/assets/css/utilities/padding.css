@@ -1,0 +1,14 @@
+.padding-0 { padding: 0 }
+.padding-xs { padding: var(--s-xs) }
+.padding-sm { padding: var(--s-sm) }
+.padding-md { padding: var(--s-md) }
+.padding-xlg { padding: var(--s-xlg) }
+
+.padding-block-sm { padding-block: var(--s-sm) }
+.padding-block-md { padding-block: var(--s-md) }
+
+@media screen and (min-width: 1024px) {
+  .lg-padding-0 {
+    padding: 0;
+  }
+}
