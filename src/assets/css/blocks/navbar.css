@@ -1,11 +1,24 @@
-.navbar a {
-  color: inherit;
+.navbar {
+  position: sticky;
+  top: -20%;
+  z-index: 10;
+}
+.navbar-container { position: relative }
+
+.navbar a { color: inherit }
+
+.navbar-links {
+  position: absolute;
+  inset: 3rem 0;
+  height: fit-content;
+  visibility: hidden;
+  opacity: 0;
 }
 
-.navbar__brand a {
-  text-decoration: none;
-}
-
-.navbar__brand a:hover {
-  text-decoration: underline;
+@media screen and (min-width: 1024px) {
+  .navbar-links {
+    position: initial;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
 }
