@@ -2,8 +2,8 @@
   {
     "platform": "Email",
     "url": "mailto:aldo.seb.mendez@gmail.com",
-    "icon": "mail.svg",
-    "label": "Let's chat!"
+    "icon": "small/mail.svg",
+    "label": "Send me an email!"
   },
   {
     "platform": "Github",
@@ -15,7 +15,7 @@
     "platform": "LinkedIn",
     "url": "https://www.linkedin.com/in/seb-mendez/",
     "icon": "linkedin.svg",
-    "label": "Let's connect"
+    "label": "Connect with me"
   },
   {
     "platform": "Mastodon",
