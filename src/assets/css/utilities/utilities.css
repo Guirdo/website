@@ -4,6 +4,8 @@
 }
 .w-90 { width: 90% }
 
+.w-fit-content { width: fit-content; }
+
 .bg-primary { background-color: var(--primary) }
 .bg-secondary { background-color: var(--secondary) }
 .bg-white { background-color: var(--white) }
@@ -41,18 +43,11 @@
 
 .align-self-end { align-self: flex-end }
 
+.fs-xs { font-size: var(--s-xs) }
 .fs-sm { font-size: var(--s-sm) }
 .fs-md { font-size: var(--s-md) }
 .fs-lg { font-size: var(--s-lg) }
 .fs-xlg { font-size: var(--s-xlg) }
-
-.mi-start-auto { margin-inline-start: auto }
-.mi-end-auto { margin-inline-end: auto }
-.mi-auto { margin-inline: auto }
-.mi-xlg { margin-inline: var(--s-xlg) }
-
-.mb-start-xlg { margin-block-start: var(--s-xlg) }
-.mb-end-xlg { margin-block-end: var(--s-xlg) }
 
 .justify-content-between { justify-content: space-between }
 .justify-content-evenly { justify-content: space-evenly }

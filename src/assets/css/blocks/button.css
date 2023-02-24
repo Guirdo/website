@@ -9,5 +9,5 @@
 
 .button[data-type="secondary"] {
   background-color: var(--secondary);
-  color: var(--white);
+  color: var(--dark);
 }
