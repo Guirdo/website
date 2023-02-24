@@ -26,19 +26,17 @@ templateEngineOverride: njk
     <h2 class="[ mb-start-lg text-white ]">Projects</h2>
 
     <div class="[ project-section-grid ] [ gap-md ]">
-      {% for index in range(0,4) %}
+      {% for item in collections.promotedProjects %}
       <article
         class="[ flex-column ] [ bg-white text-dark ]">
-        <img class="project-card__cover" src="https://picsum.photos/600/400" alt="Project name">
+        <img class="project-card__cover" src="https://picsum.photos/600/400" alt="Screenshot of {{ item.data.title }}">
         <div class="[ flex-column ] [ padding-xs gap-xs bg-secondary ]">
-          <h3 class="project-card__title">Project name</h3>
+          <h3 class="project-card__title">{{ item.data.title }}</h3>
 
-          <p class="fs-xs">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia delectus nemo rerum. Maiores reiciendistempora esse dolorum eum nam omnis cumque non! Perferendis, explicabo! Amet dolores maiores cupiditate quae cum.
-          </p>
+          <p class="fs-xs">{{ item.data.description }}</p>
         </div>
 
-        <a class="[ flex-row ] [ text-inherit align-items-center padding-xs bg-white justify-content-evenly ]">
+        <a href="{{ item.url | url }}" class="[ flex-row ] [ text-inherit align-items-center padding-xs bg-white justify-content-evenly ]">
           Learn more
         </a>
       </article>
