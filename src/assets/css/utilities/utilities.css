@@ -1,0 +1,90 @@
+.h-100vh {
+  height: 100vh;
+  height: 100dvh;
+}
+.w-90 { width: 90% }
+
+.w-fit-content { width: fit-content; }
+
+.aspect-ratio-12-9 { aspect-ratio: 12 / 9 }
+
+.bg-primary { background-color: var(--primary) }
+.bg-secondary { background-color: var(--secondary) }
+.bg-white { background-color: var(--white) }
+
+.text-primary { color: var(--primary) }
+.text-white { color: var(--white) }
+.text-dark { color: var(--dark) }
+.text-inherit { color: inherit }
+
+.text-align-start { text-align: start }
+.text-align-center { text-align: center }
+.text-align-end { text-align: end }
+
+.text-decoration-none { text-decoration: none; }
+
+.fw-bold { font-weight: bold }
+
+.box-shadow-blur  { box-shadow: 0px 5px 15px var(--shadow) }
+
+.gap-xs { gap: var(--s-xs) }
+.gap-sm { gap: var(--s-sm) }
+.gap-md { gap: var(--s-md) }
+.gap-lg { gap: var(--s-lg) }
+.gap-xlg { gap: var(--s-xlg) }
+
+.flex-wrap { flex-wrap: wrap }
+.flex-grow { flex-grow: 1 }
+.flex-grow-2 { flex-grow: 2 }
+
+.list-style-none { list-style: none }
+
+.align-items-start { align-items: start }
+.align-items-center { align-items: center }
+.align-items-end { align-items: flex-end }
+
+.align-self-end { align-self: flex-end }
+
+.fs-xs { font-size: var(--s-xs) }
+.fs-sm { font-size: var(--s-sm) }
+.fs-md { font-size: var(--s-md) }
+.fs-lg { font-size: var(--s-lg) }
+.fs-xlg { font-size: var(--s-xlg) }
+
+.justify-content-between { justify-content: space-between }
+.justify-content-evenly { justify-content: space-evenly }
+.justify-content-center { justify-content: center }
+
+.border-radius-50 { border-radius: 50% }
+
+.border-primary { border: 2px solid var(--primary) }
+.border-white { border: 2px solid var(--white) }
+.no-border { border: none }
+.no-background { background:none }
+
+.visible { 
+  visibility: visible; 
+  opacity: 1;
+}
+
+.invisible {
+  visibility: hidden; 
+  opacity: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .lg-visible {
+    visibility: visible; 
+    opacity: 1;
+  }
+
+  .lg-invisible {
+    visibility: hidden; 
+    opacity: 0;
+  }
+
+  .lg-display-none { display: none }
+  .lg-box-shadow-none { box-shadow: none }
+
+  .lg-justify-content-end { justify-content: flex-end }
+}

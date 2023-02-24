@@ -1,0 +1,40 @@
+<nav class="[ navbar ] [ bg-primary padding-block-sm ]">
+  <div class="[ navbar-container ] [ flex-row ] [ gap-xs justify-content-between align-items-center mi-xlg mi-auto text-white ]">
+    <a class="[ navbar__brand ] [ mi-end-auto text-decoration-none ]" href="/">
+      Seb Méndez
+    </a>
+    <div id="navbarLinks" class="[ navbar-links ] [ flex-column ] [ box-shadow-blur lg-box-shadow-none bg-primary gap-xs padding-xs lg-padding-0 lg-visible align-items-center ]">
+      <a href="/#about-me" aria-label="About section">
+        About
+      </a>
+      <a href="/#projects" aria-label="Projects section">
+        Projects
+      </a>
+      <a href="/#contact" aria-label="Contact section">
+        Contact
+      </a>
+    </div>
+    <div class="[ navbar-controls ] [ flex-row ] [ gap-xs align-items-center ]">
+      <button
+        id="menuButton" 
+        class="[ flex-row ] [ lg-display-none no-border no-background align-items-center text-white ]"
+        aria-label="Menu"
+      >
+        {% include "icons/menu.svg" %}
+      </button>
+      <button
+        class="flex-row no-border no-background align-items-center text-white"
+        aria-label="Select language"
+      >
+        {% include "icons/translate.svg" %}
+      </button>
+  
+      <button
+        class="flex-row no-border no-background align-items-center text-white"
+        aria-label="Select theme"
+      >
+        {% include "icons/palette.svg" %}
+      </button>
+    </div>
+  </div>
+</nav>

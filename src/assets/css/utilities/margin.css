@@ -1,0 +1,9 @@
+.mi-start-auto { margin-inline-start: auto }
+.mi-end-auto { margin-inline-end: auto }
+.mi-auto { margin-inline: auto }
+.mi-xlg { margin-inline: var(--s-xlg) }
+
+.mb-start-lg { margin-block-start: var(--s-lg) }
+.mb-start-xlg { margin-block-start: var(--s-xlg) }
+.mb-end-lg { margin-block-end: var(--s-lg) }
+.mb-end-xlg { margin-block-end: var(--s-xlg) }

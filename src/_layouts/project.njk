@@ -1,0 +1,27 @@
+---
+layout: "base.njk"
+---
+
+<article class="[ container inner-container ] [ bg-white padding-sm padding-block-0 ]">
+  <header>
+    <h2>{{ title }}</h2>
+    <p>
+      <em class="fs-xs">{{ description }}</em>
+    </p>
+    <p>
+      <small class="fs-xs">
+      <b>Tags: </b>
+      {% for tag in tags %}
+        <a>{{ tag }}</a>
+      {% endfor  %}
+    </small>
+    </p>
+  </header>
+  <hr>
+  <main>
+    {{ content | safe }}
+  </main>
+  <footer>
+    <h3>References</h3>
+  </footer>
+</article>

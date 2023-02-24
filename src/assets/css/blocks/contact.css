@@ -1,0 +1,4 @@
+.contact-socials {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(max(12rem,14rem), 1fr));
+}

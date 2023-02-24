@@ -1,0 +1,13 @@
+.project-section {
+  /* Generated with https://css-generators.com/custom-borders/?type=zig-zag&side=vertical&size=20&unit-size=px&angle=90 */
+  --mask: 
+    conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) top/60.00px 51% repeat-x,
+    conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/60.00px 51% repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+
+.project-section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(max(12rem,16rem), 1fr));
+}

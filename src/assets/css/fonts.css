@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Inconsolata';
+  font-weight: 400;
+  src: url('/assets/fonts/Inconsolata-Regular.woff2') format('woff2'),
+      url('/assets/fonts/Inconsolata-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inconsolata';
+  font-weight: 700;
+  src: url('/assets/fonts/Inconsolata-Bold.woff2') format('woff2'),
+      url('/assets/fonts/Inconsolata-Bold.woff') format('woff');
+  font-display: swap;
+}

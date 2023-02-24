@@ -1,0 +1,18 @@
+:root {
+  /* Font */
+  --font: 'Inconsolata', monospace;
+
+  /* Color */
+  --primary: #3f4a3c;
+  --secondary: #a2af9f;
+  --shadow: rgba(0, 0, 0, 0.35);
+  --white: #f4fcf1;
+  --dark: #000000;
+
+  /* Spacing */
+  --s-xs: 1rem;
+  --s-sm: 1.25rem;
+  --s-md: 1.5rem;
+  --s-lg: 1.75rem;
+  --s-xlg: 2rem;
+}

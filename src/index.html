@@ -1,12 +1,88 @@
 ---
-layout: layouts/base.njk
-title: Guirdo
+layout: home.njk
+title: Seb Méndez | Front-end developer
 description: "Welcome to my site"
+templateEngineOverride: njk
 ---
 
-<h1>Hello world!</h1>
-<p>I'm Seb Méndez</p>
+<section id="about-me" class="bg-secondary">
+  <div class="[ container inner-container ] [ flex-column ] [ gap-md ]">
+    <h2>About me</h2>
 
-<a href="https://guirdo.xyz">Hola</a>
+    <p>
+      I'm front-end developer from Mexico, I finished a computational system engineering degree and I'm looking for joining a great team who's working in useful and good-looking web app and pages.
+    </p>
+    <p>
+      Since 2019, I've been developing web sites which I found a way to express myself and to help others bring their ideas to life (Take a look to my work below).
+    </p>
+    <p>
+      In order to achieve this, every day I'm reading and studying about the last updates in the web environment and the best practices and I write about what I learn.
+    </p>
+  </div>
+</section>
 
-<img src="{{ 'https://res.cloudinary.com/dyuo7wfyi/image/upload/v1675993695/sample.jpg' | url }}" >
+<section id="projects" class="[ project-section ] [ bg-primary ]">
+  <div class="[ container inner-container ] [ flex-column align-items-center ] [ gap-md ]">
+    <h2 class="[ mb-start-lg text-white ]">Projects</h2>
+
+    <div class="[ project-section-grid ] [ gap-md ]">
+      {% for item in collections.promotedProjects %}
+      <article
+        class="[ flex-column ] [ bg-white text-dark ]">
+        <img 
+          class="project-card__cover aspect-ratio-12-9 " 
+          src="https://picsum.photos/600/450" 
+          alt="Screenshot of {{ item.data.title }}" 
+          width="100%"
+          height="auto"
+        >
+        <div class="[ flex-column ] [ padding-xs gap-xs bg-secondary ]">
+          <h3 class="project-card__title">{{ item.data.title }}</h3>
+
+          <p class="fs-xs">{{ item.data.description }}</p>
+        </div>
+
+        <a
+          class="[ flex-row ] [ text-inherit align-items-center padding-xs bg-white justify-content-evenly ]"
+          href="{{ item.url | url }}" 
+          aria-label="Learn more about {{ item.data.title }}"
+        >
+          Learn more
+        </a>
+      </article>
+      {% endfor %}
+    </div>
+
+    <a
+      href="/projects"
+      class="[ flex-row ] [ text-inherit align-items-center padding-xs bg-white justify-content-evenly mb-end-lg w-fit-content ]"
+      aria-label="View more projects"
+    >
+      View more projects
+    </a>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="[ container inner-container ] [ flex-column ] [ gap-md ]">
+    <h2 class="[ contact-section__title ] [ text-align-start fs-xlg ] ">Contact me!</h2>
+
+    <p>
+      It would be cool if you send me a message or any doubt you get about my work or anything else. You can also contact me on my social networks.
+    </p>
+
+    <div class="[ contact-socials ] [ gap-xs ]">
+      {% for item in social %}
+      <a
+        class="[ flex-row ] [ bg-white gap-xs text-inherit align-items-center padding-xs ]"
+        href="{{ item.url | url }}" 
+        aria-label="{{ item.label }}"
+        target="_blank"
+      >
+        {% include "icons/"+item.icon %}
+        <span class="fs-xs">{{ item.label }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

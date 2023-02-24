@@ -1,0 +1,8 @@
+.container {
+  width: 90%;
+}
+.inner-container {
+  max-width: 64rem;
+  padding-block: calc(var(--s-xlg) * 1.5);
+  margin-inline: auto;
+}

@@ -1,0 +1,24 @@
+<footer class="[ flex-row ] [ flex-wrap gap-md bg-primary text-white padding-xlg justify-content-evenly ]">
+  <p>
+    Made with ❤️ by Guirdo | 2022 - 2023
+  </p>
+
+  <nav>
+    <ul class="[ flex-row ] [ gap-sm list-style-none ]">
+      {% for item in social %}
+      <li>
+        <a
+          class="text-inherit"
+          href="{{ item.url | url }}"
+          aria-label="{{ item.label }}"
+          target="_blank"
+        >
+          <span>
+            {% include 'icons/'+item.icon %}
+          </span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</footer>
