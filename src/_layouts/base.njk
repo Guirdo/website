@@ -3,10 +3,11 @@
 <head>
   {% include "partials/head.njk" %}
 </head>
-<body>
+<body class="flex-column">
   {% block hero %}{% endblock %}
   {% include "partials/navbar.html" %}
-  <main>
+  
+  <main class="flex-grow-2">
     {{ content | safe }}
   </main>
 
