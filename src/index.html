@@ -49,46 +49,21 @@ templateEngineOverride: njk
   </div>
 </section>
 
-<section class="[ contact-section ] [ flex-column ] [ padding-xlg gap-lg ]">
-  <h2 class="[ contact-section__title ] [ text-align-start fs-xlg ] ">Contact me!</h2>
+<section id="contact">
+  <div class="[ container inner-container ] [ flex-column ] [ gap-md ]">
+    <h2 class="[ contact-section__title ] [ text-align-start fs-xlg ] ">Contact me!</h2>
 
-  <div class="[ contact-section-container ] [ gap-xlg ]">
-    <div class="[ flex-column ] [ gap-xlg ]">
-      <p>
-        It would be cool if you send me a message or any doubt you get about my work or anything else. You can also
-        contact me on my social networks.
-      </p>
+    <p>
+      It would be cool if you send me a message or any doubt you get about my work or anything else. You can also contact me on my social networks.
+    </p>
 
-      <ul class="list-style-none flex-column gap-sm">
-        {% for item in social %}
-        <li>
-          <a class="[ flex-row ] [ gap-xs text-primary ]" href="{{ item.url | url }}">
-            <span>
-              {% include 'icons/' + item.icon %}
-            </span>
-            <span class="text-align-center">{{ item.label }}</span>
-          </a>
-        </li>
-        {% endfor %}
-      </ul>
+    <div class="[ contact-socials ] [ gap-xs ]">
+      {% for item in social %}
+      <a href="{{ item.url | url }}" class="[ flex-row ] [ bg-white gap-xs text-inherit align-items-center padding-xs ]">
+        {% include "icons/"+item.icon %}
+        <span class="fs-xs">{{ item.label }}</span>
+      </a>
+      {% endfor %}
     </div>
-
-    <form class="[ flex-column ] [ box-shadow-blur border-primary padding-sm gap-sm ]">
-      <div class="[ flex-column ] [ gap-xs ]">
-        <label for="name">Your name</label>
-        <input name="name" id="name">
-      </div>
-      <div class="[ flex-column ] [ gap-xs ]">
-        <label for="email">Your email address</label>
-        <input name="email" id="email" type="mail">
-      </div>
-      <div class="[ flex-column ] [ gap-xs ]">
-        <label for="message">Your message</label>
-        <textarea name="message" id="message" rows="3"></textarea>
-      </div>
-      <button class="[ button ] [ fw-bold ]" data-type="primary" type="submit">
-        Send message
-      </button>
-    </form>
   </div>
 </section>
