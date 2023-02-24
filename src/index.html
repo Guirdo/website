@@ -29,21 +29,35 @@ templateEngineOverride: njk
       {% for item in collections.promotedProjects %}
       <article
         class="[ flex-column ] [ bg-white text-dark ]">
-        <img class="project-card__cover" src="https://picsum.photos/600/400" alt="Screenshot of {{ item.data.title }}">
+        <img 
+          class="project-card__cover aspect-ratio-12-9 " 
+          src="https://picsum.photos/600/450" 
+          alt="Screenshot of {{ item.data.title }}" 
+          width="100%"
+          height="auto"
+        >
         <div class="[ flex-column ] [ padding-xs gap-xs bg-secondary ]">
           <h3 class="project-card__title">{{ item.data.title }}</h3>
 
           <p class="fs-xs">{{ item.data.description }}</p>
         </div>
 
-        <a href="{{ item.url | url }}" class="[ flex-row ] [ text-inherit align-items-center padding-xs bg-white justify-content-evenly ]">
+        <a
+          class="[ flex-row ] [ text-inherit align-items-center padding-xs bg-white justify-content-evenly ]"
+          href="{{ item.url | url }}" 
+          aria-label="Learn more about {{ item.data.title }}"
+        >
           Learn more
         </a>
       </article>
       {% endfor %}
     </div>
 
-    <a href="/projects" class="[ flex-row ] [ text-inherit align-items-center padding-xs bg-white justify-content-evenly mb-end-lg w-fit-content ]">
+    <a
+      href="/projects"
+      class="[ flex-row ] [ text-inherit align-items-center padding-xs bg-white justify-content-evenly mb-end-lg w-fit-content ]"
+      aria-label="View more projects"
+    >
       View more projects
     </a>
   </div>
@@ -59,7 +73,11 @@ templateEngineOverride: njk
 
     <div class="[ contact-socials ] [ gap-xs ]">
       {% for item in social %}
-      <a href="{{ item.url | url }}" class="[ flex-row ] [ bg-white gap-xs text-inherit align-items-center padding-xs ]">
+      <a
+        class="[ flex-row ] [ bg-white gap-xs text-inherit align-items-center padding-xs ]"
+        href="{{ item.url | url }}" 
+        aria-label="{{ item.label }}"
+      >
         {% include "icons/"+item.icon %}
         <span class="fs-xs">{{ item.label }}</span>
       </a>

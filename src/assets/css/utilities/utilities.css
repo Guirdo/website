@@ -6,6 +6,8 @@
 
 .w-fit-content { width: fit-content; }
 
+.aspect-ratio-12-9 { aspect-ratio: 12 / 9 }
+
 .bg-primary { background-color: var(--primary) }
 .bg-secondary { background-color: var(--secondary) }
 .bg-white { background-color: var(--white) }
