@@ -7,7 +7,7 @@ templateEngineOverride: njk
 
 <section id="about-me" class="bg-secondary">
   <div class="[ container inner-container ] [ flex-column ] [ gap-md ]">
-    <h2 class="">About me</h2>
+    <h2>About me</h2>
 
     <p>
       I'm front-end developer from Mexico, I finished a computational system engineering degree and I'm looking for joining a great team who's working in useful and good-looking web app and pages.
@@ -21,26 +21,33 @@ templateEngineOverride: njk
   </div>
 </section>
 
-<section class="[ project-section ] [ flex-column ] [ bg-primary text-white padding-xlg gap-lg mb-start-xlg ]">
-  <h2 class="[ project-section__title ] [ mi-start-auto mb-start-xlg fs-xlg ]">Projects</h2>
+<section class="[ project-section ] [ bg-primary ]">
+  <div class="[ container inner-container ] [ flex-column align-items-center ] [ gap-md ]">
+    <h2 class="[ mb-start-lg text-white ]">Projects</h2>
 
-  <div class="[ project-section-grid ] [ grid-column ] [ gap-xlg mb-end-xlg ]">
-    {% for index in range(0,4) %}
-    <article
-      class="[ project-card ] [ flex-column ] [ padding-xs gap-xs justify-content-center bg-white text-dark box-shadow-blur ]">
-      <img class="project-card__cover" src="https://picsum.photos/600/400" alt="Project name">
-      <h3 class="project-card__title">Project name</h3>
+    <div class="[ project-section-grid ] [ gap-md ]">
+      {% for index in range(0,4) %}
+      <article
+        class="[ flex-column ] [ bg-white text-dark ]">
+        <img class="project-card__cover" src="https://picsum.photos/600/400" alt="Project name">
+        <div class="[ flex-column ] [ padding-xs gap-xs bg-secondary ]">
+          <h3 class="project-card__title">Project name</h3>
 
-      <p class="project-card__description">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia delectus nemo rerum. Maiores reiciendis
-        tempora esse dolorum eum nam omnis cumque non! Perferendis, explicabo! Amet dolores maiores cupiditate quae cum.
-      </p>
+          <p class="fs-xs">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia delectus nemo rerum. Maiores reiciendistempora esse dolorum eum nam omnis cumque non! Perferendis, explicabo! Amet dolores maiores cupiditate quae cum.
+          </p>
+        </div>
 
-      <button class="button fw-bold" data-type="secondary">
-        Learn more
-      </button>
-    </article>
-    {% endfor %}
+        <a class="[ flex-row ] [ text-inherit align-items-center padding-xs bg-white justify-content-evenly ]">
+          Learn more
+        </a>
+      </article>
+      {% endfor %}
+    </div>
+
+    <a href="/projects" class="[ flex-row ] [ text-inherit align-items-center padding-xs bg-white justify-content-evenly mb-end-lg w-fit-content ]">
+      View more projects
+    </a>
   </div>
 </section>
 
