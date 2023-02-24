@@ -10,6 +10,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(require('./config/template-languages/js-config.js'))
 
   eleventyConfig.addPassthroughCopy('src/assets/fonts/')
+  eleventyConfig.addPassthroughCopy({
+    './src/assets/images/favicon/*': '/'
+  });
 
   return {
     dir: {
