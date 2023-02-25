@@ -3,11 +3,11 @@
   --font: 'Inconsolata', monospace;
 
   /* Color */
-  --primary: #3f4a3c;
-  --secondary: #a2af9f;
+  --primary: #170C26;
+  --secondary: #7D7D8C;
   --shadow: rgba(0, 0, 0, 0.35);
-  --white: #f4fcf1;
-  --dark: #000000;
+  --white: #F0F0F2;
+  --dark: #07030D;
 
   /* Spacing */
   --s-xs: 1rem;
