@@ -3,9 +3,11 @@
   height: 100dvh;
 }
 .w-90 { width: 90% }
+.w-lg { width: var(--s-lg) }
 
 .w-fit-content { width: fit-content; }
 
+.aspect-ratio-1 { aspect-ratio: 1 }
 .aspect-ratio-12-9 { aspect-ratio: 12 / 9 }
 
 .bg-primary { background-color: var(--primary) }
@@ -72,7 +74,7 @@
   opacity: 0;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 64rem) {
   .lg-visible {
     visibility: visible; 
     opacity: 1;
@@ -87,4 +89,6 @@
   .lg-box-shadow-none { box-shadow: none }
 
   .lg-justify-content-end { justify-content: flex-end }
+
+  .lg-fs-sm { font-size: var(--s-sm) }
 }

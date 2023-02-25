@@ -5,11 +5,12 @@
 .padding-xlg { padding: var(--s-xlg) }
 
 .padding-block-0 { padding-block: 0 }
+.padding-block-xs { padding-block: var(--s-xs) }
 .padding-block-sm { padding-block: var(--s-sm) }
 .padding-block-md { padding-block: var(--s-md) }
 
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 64rem) {
   .lg-padding-0 {
     padding: 0;
   }
