@@ -2,7 +2,7 @@
   {
     "platform": "Email",
     "url": "mailto:aldo.seb.mendez@gmail.com",
-    "icon": "small/mail.svg",
+    "icon": "mail.svg",
     "label": "Send me an email!"
   },
   {
