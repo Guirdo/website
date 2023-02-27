@@ -2,26 +2,45 @@
 layout: "base.njk"
 ---
 
-<article class="[ container inner-container ] [ bg-white padding-sm padding-block-0 ]">
-  <header>
-    <h2>{{ title }}</h2>
-    <p>
-      <em class="fs-xs">{{ description }}</em>
-    </p>
-    <p>
-      <small class="fs-xs">
-      <b>Tags: </b>
-      {% for tag in tags %}
-        <a>{{ tag }}</a>
-      {% endfor  %}
-    </small>
-    </p>
-  </header>
-  <hr>
-  <main>
-    {{ content | safe }}
-  </main>
-  <footer>
-    <h3>References</h3>
-  </footer>
-</article>
+<article class="[ container inner-container ] [ flex-column ] [ gap-xs bg-white padding-sm padding-block-xs ]">
+  <header class="[ flex-column ] [ gap-xs ]">
+    <picture class="lg-w-75 w-100 align-self-center">
+      <img class="border-primary" src="{{ screenshot | url }}" alt="Screenshot of {{ title }}" width="100%" height="auto"></picture>
+      <div>
+        <h2>{{ title }}</h2>
+        <p>
+          <em class="fs-xs">{{ description }}</em>
+        </p>
+        <p>
+          <small class="fs-xs">
+            <b>Stack:
+            </b>
+            {{ stack | joiner(', ') }}
+          </small>
+        </p>
+        <div class="flex-row gap-xs">
+          {% if repoUrl %}
+            <a class="fs-xs text-inherit align-items-center" href="{{ repoUrl | url }}" target="_blank">
+              {% include "icons/small/github.svg" %} Check the code
+            </a>
+          {% endif %}
+          {% if demoUrl %}
+            <a class="fs-xs text-inherit" href="{{ demoUrl | url }}" target="_blank">
+              {% include "icons/small/internet.svg" %} Live demo
+            </a>
+          {% endif %}
+        </div>
+      </div>
+      <p class="fs-xxs">
+          <span>{% include "icons/small/tag.svg" %}</span>
+          {# {{ tags | turnAnchorTag | joiner(', ') | safe }} #}
+          {% for tag in tags %}
+            <a>{{ tag }}</a>
+          {% endfor %}
+        </p>
+    </header>
+    <hr>
+      <main>
+        {{ content | safe }}
+      </main>
+    </article>
