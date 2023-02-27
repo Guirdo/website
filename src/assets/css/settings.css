@@ -10,6 +10,7 @@
   --dark: #07030D;
 
   /* Spacing */
+  --s-xxs: 0.90rem;
   --s-xs: 1rem;
   --s-sm: 1.25rem;
   --s-md: 1.5rem;

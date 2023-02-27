@@ -1,6 +1,5 @@
-.container {
-  width: 90%;
-}
+.container { width: 90% }
+.container-lg {width: min(100%, 64rem);}
 .inner-container {
   max-width: 64rem;
   padding-block: calc(var(--s-xlg) * 1.5);

@@ -7,7 +7,7 @@
   mask: var(--mask);
 }
 
-.project-section-grid {
+.project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(max(12rem,16rem), 1fr));
 }
