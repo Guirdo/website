@@ -7,7 +7,7 @@ layout: "base.njk"
     <picture class="lg-w-75 w-100 align-self-center">
       <img class="border-primary" src="{{ screenshot | url }}" alt="Screenshot of {{ title }}" width="100%" height="auto"></picture>
       <div>
-        <h2>{{ title }}</h2>
+        <h1>{{ title }}</h1>
         <p>
           <em class="fs-xs">{{ description }}</em>
         </p>
@@ -31,13 +31,19 @@ layout: "base.njk"
           {% endif %}
         </div>
       </div>
+      <div class="flex-row flex-wrap gap-xs">
+        <p class="fs-xxs">
+        Created on:
+        <time date="{{ date }}">{{ date | formatDateYYYYMMDD }}</time>
+      </p>
       <p class="fs-xxs">
-          <span>{% include "icons/small/tag.svg" %}</span>
-          {# {{ tags | turnAnchorTag | joiner(', ') | safe }} #}
-          {% for tag in tags %}
-            <a>{{ tag }}</a>
-          {% endfor %}
-        </p>
+        <span>{% include "icons/small/tag.svg" %}</span>
+        {# {{ tags | turnAnchorTag | joiner(', ') | safe }} #}
+        {% for tag in tags %}
+          <a>{{ tag }}</a>
+        {% endfor %}
+      </p>
+      </div>
     </header>
     <hr>
       <main>
