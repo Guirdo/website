@@ -5,11 +5,13 @@
   /* Color */
   --primary: #170C26;
   --secondary: #7D7D8C;
+  --secondary-light-1: #C1C1D9;
   --shadow: rgba(0, 0, 0, 0.35);
   --white: #F0F0F2;
   --dark: #07030D;
 
   /* Spacing */
+  --s-xxs: 0.90rem;
   --s-xs: 1rem;
   --s-sm: 1.25rem;
   --s-md: 1.5rem;
