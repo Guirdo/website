@@ -12,6 +12,11 @@
     "label": "Check out my code"
   },
   {
+    "platform": "Codepen",
+    "url": "https://codepen.io/Guirdo",
+    "icon": "codepen.svg"
+  },
+  {
     "platform": "LinkedIn",
     "url": "https://www.linkedin.com/in/seb-mendez/",
     "icon": "linkedin.svg",

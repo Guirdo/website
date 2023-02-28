@@ -57,7 +57,8 @@ templateEngineOverride: njk
 
     <div class="[ contact-socials ] [ gap-xs ]">
       {% for item in social %}
-      <a
+      {% if item.label %}
+        <a
         class="[ flex-row ] [ bg-white gap-xs text-inherit align-items-center padding-xs ]"
         href="{{ item.url | url }}" 
         aria-label="{{ item.label }}"
@@ -66,6 +67,7 @@ templateEngineOverride: njk
         {% include "icons/"+item.icon %}
         <span class="fs-xs">{{ item.label }}</span>
       </a>
+      {% endif %}
       {% endfor %}
     </div>
   </div>
