@@ -20,12 +20,22 @@ layout: "base.njk"
         </p>
         <div class="flex-row gap-xs flex-wrap">
           {% if repoUrl %}
-            <a class="fs-xs text-inherit align-items-center" href="{{ repoUrl | url }}" target="_blank">
+            <a
+              class="fs-xs text-inherit align-items-center" 
+              href="{{ repoUrl | url }}" 
+              target="_blank"
+              aria-label="Check out the of {{ title }}"
+            >
               {% include "icons/small/github.svg" %} Check the code
             </a>
           {% endif %}
           {% if demoUrl %}
-            <a class="fs-xs text-inherit" href="{{ demoUrl | url }}" target="_blank">
+            <a
+              class="fs-xs text-inherit" 
+              href="{{ demoUrl | url }}" 
+              target="_blank"
+              aria-label="Live demo of {{ title }}"
+            >
               {% include "icons/small/internet.svg" %} Live demo
             </a>
           {% endif %}
