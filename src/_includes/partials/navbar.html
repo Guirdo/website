@@ -23,6 +23,7 @@
         {% include "icons/menu.svg" %}
       </button>
       <button
+        id="themeButton"
         class="flex-row no-border no-background align-items-center text-white"
         aria-label="Select language"
       >
@@ -36,5 +37,30 @@
         {% include "icons/palette.svg" %}
       </button>
     </div>
+    <form
+      id="themeMenu" 
+      class="[ navbar-themes ] [ flex-column ] [ box-shadow-blur bg-primary gap-xs padding-xs lg-visible align-items-center visible ]"
+    >
+    <div class="flex-row w-100 gap-xs bg-white-100 padding-xs">
+      <div class="flex-column gap-xxs align-items-center">
+        <input
+          id="mermaid"
+          type="radio"
+          name="theme"
+          checked 
+        >
+        <label class="fs-xxs">Mermaid sunset</label>
+      </div>
+
+      <div class="flex-column gap-xxs align-items-center">
+        <input
+          id="roqueta"
+          type="radio"
+          name="theme"
+        >
+        <label class="fs-xxs">Roqueta afternoon</label>
+      </div>
+    </div>
+    </form>
   </div>
 </nav>

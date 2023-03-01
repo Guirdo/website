@@ -3,11 +3,15 @@
   --font: 'Inconsolata', monospace;
 
   /* Color */
+  --mermaid: hsl(265 52% 10%);
+  --roqueta: hsl(22 34% 48%);
+
   --primary: #170C26;
   --secondary: #7D7D8C;
   --secondary-light-1: #C1C1D9;
   --shadow: rgba(0, 0, 0, 0.35);
   --white: #F0F0F2;
+  --white-100: rgb(240 240 242 / 0.5);
   --dark: #07030D;
 
   /* Spacing */
@@ -17,4 +21,33 @@
   --s-md: 1.5rem;
   --s-lg: 1.75rem;
   --s-xlg: 2rem;
+}
+
+:root:has(#mermaid:checked) {
+  --primary: hsl(265 52% 10%);
+  --secondary: hsl(240, 6%, 52%);
+  --secondary-light-1: 	hsl(240, 24%, 80%);
+  --white: hsl(240, 7%, 95%);
+  --white-100: hsl(240 7% 95% / 50%) ;
+  --dark: 	hsl(264, 63%, 3%);
+}
+
+:root:has(#roqueta:checked) {
+  --primary: hsl(22 34% 48%);
+  --secondary: 	hsl(214, 49%, 71%);
+  --secondary-light-1:	hsl(194, 100%, 97%);
+  --white: 	hsl(201, 35%, 92%);
+  --white-100: hsl(201 35% 92% / 50%);
+  --dark:	hsl(205, 100%,5%);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --primary: hsl(22 34% 48%);
+    --secondary: 	hsl(214, 49%, 71%);
+    --secondary-light-1:	hsl(194, 100%, 97%);
+    --white: 	hsl(201, 35%, 92%);
+    --white-100: hsl(201 35% 92% / 50%);
+    --dark:	hsl(205, 100%,5%);
+  }
 }

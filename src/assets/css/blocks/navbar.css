@@ -7,13 +7,36 @@
 
 .navbar a { color: inherit }
 
-.navbar-links {
+.navbar-links,
+.navbar-themes {
   position: absolute;
   inset: 3rem 0;
   height: fit-content;
   visibility: hidden;
   opacity: 0;
 }
+
+.navbar-themes input[type="radio"] {
+  appearance: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  outline: 4px solid var(--radio-color, currentColor);
+  outline-offset: 4px;
+  border-radius: 50%;
+}
+
+.navbar-themes input[type="radio"]:checked {
+  background-color: var(--radio-color);
+}
+
+.navbar-themes input[type="radio"]#mermaid {
+  --radio-color: var(--mermaid);
+}
+
+.navbar-themes input[type="radio"]#roqueta {
+  --radio-color: var(--roqueta);
+}
+
 
 @media screen and (min-width: 1024px) {
   .navbar-links {
