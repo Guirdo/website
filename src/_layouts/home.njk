@@ -1,5 +1,9 @@
 {% extends "./base.njk" %}
 
+{% block pageScripts %}
+  <script type="module" src="/assets/scripts/landing-page.js" defer></script>
+{% endblock %}
+
 {% block hero %}
 <header class="[ hero ] [ flex-column-reverse align-items-end] [ h-100vh ]">
   <div class="[ hero-presentation ] [ box-shadow-blur bg-primary align-self-end ]">

@@ -1,19 +1,48 @@
 .navbar {
-  position: sticky;
-  top: -20%;
+  top: 0;
   z-index: 10;
+  transition: top ease .5s;
 }
+
 .navbar-container { position: relative }
 
 .navbar a { color: inherit }
 
-.navbar-links {
+.navbar-links,
+.navbar-themes {
   position: absolute;
-  inset: 3rem 0;
-  height: fit-content;
+  top: 3rem;
+  right: 0;
   visibility: hidden;
   opacity: 0;
+  transition: opacity ease .5s;
 }
+
+.navbar-links {
+  left: 0;
+}
+
+.navbar-themes input[type="radio"] {
+  appearance: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  outline: 4px solid var(--radio-color, currentColor);
+  outline-offset: 4px;
+  border-radius: 50%;
+}
+
+.navbar-themes input[type="radio"]:checked {
+  background-color: var(--radio-color);
+}
+
+.navbar-themes input[type="radio"]#mermaid {
+  --radio-color: var(--mermaid);
+}
+
+.navbar-themes input[type="radio"]#roqueta {
+  --radio-color: var(--roqueta);
+}
+
 
 @media screen and (min-width: 1024px) {
   .navbar-links {
