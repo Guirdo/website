@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ page.lang }}" dir="ltr">
 <head>
   {% include "partials/head.njk" %}
   {% block pageScripts %} {% endblock %}
 </head>
 <body class="flex-column">
   {% block hero %}{% endblock %}
-  {% include "partials/navbar.html" %}
+  {% include "partials/navbar.njk" %}
   
   <main class="flex-grow-2">
     {{ content | safe }}
