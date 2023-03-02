@@ -1,18 +1,21 @@
 <nav class="[ navbar ] [ bg-primary padding-block-sm ]">
   <div class="[ navbar-container ] [ flex-row ] [ gap-xs justify-content-between align-items-center mi-xlg mi-auto text-white ]">
-    <a class="[ navbar__brand ] [ mi-end-auto text-decoration-none ]" href="/">
+    <a
+      class="[ navbar__brand ] [ mi-end-auto text-decoration-none ]" 
+      href="{{ "/" | locale_url }}"
+    >
       Seb Méndez
     </a>
     <!-- Links -->
     <div id="navbarLinks" class="[ navbar-links ] [ flex-column ] [ box-shadow-blur lg-box-shadow-none bg-primary gap-xs padding-xs lg-padding-0 lg-visible align-items-center ]">
       <a href="{{ "/" | locale_url }}#about" aria-label="About section">
-        About
+        {{ 'about' | i18n }}
       </a>
       <a href="{{ "/projects/"| locale_url }}" aria-label="Projects section">
-        Projects
+        {{ 'projects' | i18n }}
       </a>
       <a href="{{ "/" | locale_url }}#contact" aria-label="Contact section">
-        Contact
+        {{ 'contact' | i18n }}
       </a>
     </div>
     <!-- Controls -->
@@ -23,7 +26,7 @@
         {% include "icons/menu.svg" %}
       </button>
       <button id="langButton"
-        class="[ flex-row ] [ lg-display-none no-border no-background align-items-center text-white ]"
+        class="[ flex-row ] [ no-border no-background align-items-center text-white ]"
         aria-label="Menu">
         {% include "icons/translate.svg" %}
       </button>
@@ -35,12 +38,13 @@
     <!-- Lang menu -->
     <div
       id="langMenu"
-      class="[ navbar-lang ] [ flex-column ] [ visible box-shadow-blur bg-primary padding-xs align-items-center ]"
+      class="[ navbar-lang ] [ flex-column ] [ box-shadow-blur bg-primary padding-xs align-items-center ]"
     >
       <a
         href="{{ page.url }}"
         lang="{{ page.lang }}"
         hreflang="{{ page.lang }}"
+        aria-label="{{ 'currentLang' | i18n }}"
       >
         {{ page.lang | upper }}
         {% if page.lang === 'es' %}
@@ -55,6 +59,7 @@
         href="{{ link.url }}" 
         lang="{{ link.lang }}"
         hreflang="{{ link.lang }}"
+        aria-label="{{ 'translateToLang' | i18n }} {{ link.lang | i18n }}"
       >
         {{ link.lang | upper }}
         {% if link.lang === 'es' %}
@@ -79,7 +84,7 @@
           name="theme"
           checked 
         >
-        <label for="mermaid" class="fs-xxs">Mermaid night</label>
+        <label for="mermaid" class="fs-xxs">{{ 'themes.mermaid' | i18n }}</label>
       </div>
 
       <div class="flex-column gap-xxs align-items-center">
@@ -88,7 +93,7 @@
           type="radio"
           name="theme"
         >
-        <label for="roqueta" class="fs-xxs">Roqueta afternoon</label>
+        <label for="roqueta" class="fs-xxs">{{ 'themes.roqueta' | i18n }}</label>
       </div>
     </div>
     </form>

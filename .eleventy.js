@@ -1,5 +1,7 @@
 const glob = require('fast-glob')
 const {EleventyI18nPlugin} = require('@11ty/eleventy');
+const i18n = require('eleventy-plugin-i18n')
+const translations = require('./src/_data/i18n')
 
 module.exports = function (eleventyConfig) {
   /* -------- Collection --------  */
@@ -20,6 +22,13 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPlugin(EleventyI18nPlugin, {
     defaultLanguage: 'es'
+  });
+  
+  eleventyConfig.addPlugin(i18n, {
+    translations,
+    fallbackLocales: {
+      '*': 'es'
+    }
   });
 
   eleventyConfig.addPlugin(require('./config/template-languages/css-config.js'))
