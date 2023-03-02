@@ -5,33 +5,66 @@
     </a>
     <!-- Links -->
     <div id="navbarLinks" class="[ navbar-links ] [ flex-column ] [ box-shadow-blur lg-box-shadow-none bg-primary gap-xs padding-xs lg-padding-0 lg-visible align-items-center ]">
-      <a href="/#about-me" aria-label="About section">
+      <a href="{{ "/" | locale_url }}#about" aria-label="About section">
         About
       </a>
-      <a href="/projects" aria-label="Projects section">
+      <a href="{{ "/projects/"| locale_url }}" aria-label="Projects section">
         Projects
       </a>
-      <a href="/#contact" aria-label="Contact section">
+      <a href="{{ "/" | locale_url }}#contact" aria-label="Contact section">
         Contact
       </a>
     </div>
     <!-- Controls -->
     <div class="[ navbar-controls ] [ flex-row ] [ gap-xs align-items-center ]">
-      <button
-        id="menuButton" 
+      <button id="menuButton"
         class="[ flex-row ] [ lg-display-none no-border no-background align-items-center text-white ]"
-        aria-label="Menu"
-      >
+        aria-label="Menu">
         {% include "icons/menu.svg" %}
       </button>
-  
-      <button
-        id="themeButton"
-        class="flex-row no-border no-background align-items-center text-white"
-        aria-label="Select theme"
-      >
+      <button id="langButton"
+        class="[ flex-row ] [ lg-display-none no-border no-background align-items-center text-white ]"
+        aria-label="Menu">
+        {% include "icons/translate.svg" %}
+      </button>
+      <button id="themeButton" class="flex-row no-border no-background align-items-center text-white"
+        aria-label="Select theme">
         {% include "icons/palette.svg" %}
       </button>
+    </div>
+    <!-- Lang menu -->
+    <div
+      id="langMenu"
+      class="[ navbar-lang ] [ flex-column ] [ visible box-shadow-blur bg-primary padding-xs align-items-center ]"
+    >
+      <a
+        href="{{ page.url }}"
+        lang="{{ page.lang }}"
+        hreflang="{{ page.lang }}"
+      >
+        {{ page.lang | upper }}
+        {% if page.lang === 'es' %}
+          🇲🇽
+        {% else %}
+          🇺🇸
+        {% endif %}
+
+      </a>
+      {% for link in page.url | locale_links %}
+      <a
+        href="{{ link.url }}" 
+        lang="{{ link.lang }}"
+        hreflang="{{ link.lang }}"
+      >
+        {{ link.lang | upper }}
+        {% if link.lang === 'es' %}
+          🇲🇽
+        {% else %}
+          🇺🇸
+        {% endif %}
+
+      </a>
+      {% endfor %}
     </div>
     <!-- Theme picker -->
     <form
