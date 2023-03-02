@@ -6,13 +6,14 @@
   --mermaid: hsl(265 52% 10%);
   --roqueta: hsl(22 34% 48%);
 
-  --primary: #170C26;
-  --secondary: #7D7D8C;
-  --secondary-light-1: #C1C1D9;
-  --shadow: rgba(0, 0, 0, 0.35);
-  --white: #F0F0F2;
-  --white-100: rgb(240 240 242 / 0.5);
-  --dark: #07030D;
+  --primary: hsl(265 52% 10%);
+  --secondary: hsl(240, 6%, 52%);
+  --secondary-light-1: 	hsl(240, 24%, 80%);
+  --white: hsl(240, 7%, 95%);
+  --white-100: hsl(240 7% 95% / 50%) ;
+  --dark: 	hsl(264, 63%, 3%);
+
+  --shadow: hsl(0 0% 0% / 0.35);
 
   /* Spacing */
   --s-xxs: 0.90rem;
