@@ -1,4 +1,5 @@
 const glob = require('fast-glob')
+const {EleventyI18nPlugin} = require('@11ty/eleventy');
 
 module.exports = function (eleventyConfig) {
   /* -------- Collection --------  */
@@ -17,6 +18,10 @@ module.exports = function (eleventyConfig) {
     });
   });
 
+  eleventyConfig.addPlugin(EleventyI18nPlugin, {
+    defaultLanguage: 'es'
+  });
+
   eleventyConfig.addPlugin(require('./config/template-languages/css-config.js'))
   eleventyConfig.addPlugin(require('./config/template-languages/js-config.js'))
 
@@ -26,6 +31,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     './src/assets/images/favicon/*': '/'
   });
+  eleventyConfig.addPassthroughCopy('src/_redirects')
 
   return {
     dir: {
