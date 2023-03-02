@@ -4,18 +4,36 @@ const themeButton = document.querySelector('#themeButton')
 const navbarLinks = document.querySelector('#navbarLinks')
 const themeMenu = document.querySelector('#themeMenu')
 
+const showMenu = () => {
+  navbarLinks.classList.add('visible')
+}
+
+const hideMenu = () => {
+  navbarLinks.classList.remove('visible')
+}
+
+const showThemeMenu = () => {
+  themeMenu.classList.add('visible')
+}
+
+const hideThemeMenu = () => {
+  themeMenu.classList.remove('visible')
+}
+
 menuButton.addEventListener('click', () => {
+  hideThemeMenu()
   if (navbarLinks.classList.contains('visible')) {
-    navbarLinks.classList.remove('visible')
+    hideMenu()
   } else {
-    navbarLinks.classList.add('visible')
+    showMenu()
   }
 })
 
 themeButton.addEventListener('click', () => {
+  hideMenu()
   if (themeMenu.classList.contains('visible')) {
-    themeMenu.classList.remove('visible')
+    hideThemeMenu()
   } else {
-    themeMenu.classList.add('visible')
+    showThemeMenu()
   }
 })
