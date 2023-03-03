@@ -1,0 +1,12 @@
+[[redirects]]
+  from = "/"
+  to = "/en/:splat"
+  status = 302
+  force = true
+  conditions = {Language = ["en"]}
+
+[[redirects]]
+  from = "/"
+  to = "/es/:splat"
+  status = 302
+  force = true
