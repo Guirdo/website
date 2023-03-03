@@ -2,7 +2,7 @@
 title: "APOD App"
 date: 2022-12-09 13:59:00 -06:00
 tags: [ReactJS,TechnicalTest]
-description: "This a nice front-end app for the Astronomical Picture Of the Day API from Nasa."
+description: "Aplicación front-end para la Imagen Astronómica del Día, API de la NASA"
 screenshot: 'https://res.cloudinary.com/dyuo7wfyi/image/upload/v1677338686/website/projects/apod-app_i8d5c5.webp'
 promoted: true
 repoUrl: 'https://github.com/Guirdo/apod-app'
@@ -10,32 +10,32 @@ demoUrl: 'https://apod-app-guirdo.vercel.app/'
 stack: [JavaScript, ReactJS, SASS ]
 ---
 
-I created this project for a company that I applied to. They asked me to choose a public API and then make a the front-end app to show and manage this API data.
+Cree este proyecto para una empresa a la que aplique para una vacante. Me pidieron escoger una API publica y hace una app front-end para mostrar y manejar su información.
 
-I chose the Astronomical Picture of the Day api, because it was the simplest one and I wanted to focused on showing my front-end skills. 
+Elegí la API de "Astronomical Picture of the Day" porque era la más simple y quiera enfocarme en mis habilidades en el front-end.
 
-## Tech stack
+## Tecnologías utilizadas
 
-The technologies I used in this project and the reasons I chose them:
+Las tecnologías que use en este proyecto y las razones por las que las escogí:
 
-  - **ReactJS:** Under a component architecture I used ReactJS library for taking advantage of the reusability of the components.
-  - **SASS** Alongside the **BEMIT** methodology, I decided to use this technology because it allows me to use nested styles.
+  - **ReactJS:** A partir de una arquitectura de componentes, utilice la librería ReactJS para hacer uso de la reutilización de sus componentes.
+  - **SASS** Junto a la metodología **BEMIT**, decidí usar esta tecnología porque me permite usar estilos anidados.
 
-## Features
+## Funcionalidades
 
-The main features of this project are: 
+Las principales funcionalidades de este proyecto son:
 
-- **Shows the astronomical picture of the day:** The first thing you see is the today's astronomical picture with its title, description and credits.
-- **You can enter a different date:** Right above the picture, there is an date input where you can enter a different date, as long as that date is from 1995-06-16 to the current day.
-- **Quality of the picture:** In the top right corner there is a switch which you can select the quality of the images that are displayed.
-- **Play the Astronomical Video:** There also are days when there is a video instead of a image, so below the thumbnail will be a button to open a modal for watching it.
-- **Random picture:** Every time you open this page it gives you a picture from a random date.
-- **Share with friends:** There is a sharing button which you can share the current picture with just a link.
+- **Muestra la imagen astronómica del día:** La primera cosas que verás es la imagen astronómica del día de hoy con su titulo, descripción y créditos.
+- **Puedes ingresar una fecha diferente:** Justo arriba de la imagen del día, hay una entrada para la fechas que quieras ver, siempre y cuando sea entre 1995-06-16 hasta el día actual.
+- **Calidad de la imagen:** En la esquina superior derecha hay un switch con el cual puedes seleccionar la calidad de las imágenes que son mostradas.
+- **Reproduce el video astronómico del día:** También existen días donde hay una imagen en vez de una imagen, así que debajo de la miniatura estará un botón para abrir un modal para verlo.
+- **Imagen aleatoria:** Cada vez que abras esta pagina te dará una imagen diferente de una fecha aleatoria.
+- **Comparte con amigos:** Cuenta con un botón para compartir con el cual puedes compartir la imagen actual con un simple link.
 
-## What I learned from this project
+## Lo qué aprendí de este proyecto
 
-The most important things I learned from this project are:
+Lo más importante que aprendí de este proyecto fue:
 
-- To implement my own modals and their styles. I read some article and videos to do it.
-- To implement a custom switch with a checkbox input. 
-- To customize the scrollbar.
+- Implementar mis propios modales y sus estilos.
+- Implementar un switch personalizado con un checkbox.
+- Personalizar la barra de scroll.
