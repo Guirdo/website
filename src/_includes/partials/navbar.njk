@@ -9,13 +9,13 @@
     <!-- Links -->
     <div id="navbarLinks" class="[ navbar-links ] [ flex-column ] [ box-shadow-blur lg-box-shadow-none bg-primary gap-xs padding-xs lg-padding-0 lg-visible align-items-center ]">
       <a href="{{ "/" | locale_url }}#about" aria-label="About section">
-        {{ 'about' | i18n }}
+        {{ 'common.about' | i18n }}
       </a>
       <a href="{{ "/projects/"| locale_url }}" aria-label="Projects section">
-        {{ 'projects' | i18n }}
+        {{ 'common.projects' | i18n }}
       </a>
       <a href="{{ "/" | locale_url }}#contact" aria-label="Contact section">
-        {{ 'contact' | i18n }}
+        {{ 'common.contact' | i18n }}
       </a>
     </div>
     <!-- Controls -->
@@ -40,26 +40,12 @@
       id="langMenu"
       class="[ navbar-lang ] [ flex-column ] [ box-shadow-blur bg-primary padding-xs align-items-center ]"
     >
-      <a
-        href="{{ page.url }}"
-        lang="{{ page.lang }}"
-        hreflang="{{ page.lang }}"
-        aria-label="{{ 'currentLang' | i18n }}"
-      >
-        {{ page.lang | upper }}
-        {% if page.lang === 'es' %}
-          🇲🇽
-        {% else %}
-          🇺🇸
-        {% endif %}
-
-      </a>
       {% for link in page.url | locale_links %}
       <a
         href="{{ link.url }}" 
         lang="{{ link.lang }}"
         hreflang="{{ link.lang }}"
-        aria-label="{{ 'translateToLang' | i18n }} {{ link.lang | i18n }}"
+        aria-label="{{ 'common.translateToLang' | i18n }} {{ 'common.'+link.lang | i18n }}"
       >
         {{ link.lang | upper }}
         {% if link.lang === 'es' %}
@@ -70,6 +56,20 @@
 
       </a>
       {% endfor %}
+      <a
+        href="{{ page.url }}"
+        lang="{{ page.lang }}"
+        hreflang="{{ page.lang }}"
+        aria-label="{{ 'common.'+currentLang | i18n }}"
+      >
+        {{ page.lang | upper }}
+        {% if page.lang === 'es' %}
+          🇲🇽
+        {% else %}
+          🇺🇸
+        {% endif %}
+
+      </a>
     </div>
     <!-- Theme picker -->
     <form

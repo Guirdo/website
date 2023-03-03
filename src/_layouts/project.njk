@@ -24,9 +24,9 @@ layout: "base.njk"
               class="fs-xs text-inherit align-items-center" 
               href="{{ repoUrl | url }}" 
               target="_blank"
-              aria-label="Check out the of {{ title }}"
+              aria-label="{{ 'project.checkCodeAria' | i18n({ project: title }) }}"
             >
-              {% include "icons/small/github.svg" %} Check the code
+              {% include "icons/small/github.svg" %} {{ 'project.checkCode' | i18n }}
             </a>
           {% endif %}
           {% if demoUrl %}
@@ -34,9 +34,9 @@ layout: "base.njk"
               class="fs-xs text-inherit" 
               href="{{ demoUrl | url }}" 
               target="_blank"
-              aria-label="Live demo of {{ title }}"
+              aria-label="{{ 'project.onlineDemoAria' | i18n({ project: title }) }}"
             >
-              {% include "icons/small/internet.svg" %} Live demo
+              {% include "icons/small/internet.svg" %} {{ 'project.onlineDemo' | i18n }}
             </a>
           {% endif %}
         </div>

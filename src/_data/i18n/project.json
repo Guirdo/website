@@ -1,0 +1,18 @@
+{
+  "checkCode": {
+    "es":"Revisa el código",
+    "en":"Check the code"
+  },
+  "checkCodeAria": {
+    "es":"Revisa el codigo de {{ project }}",
+    "en":"Check the code of {{ project }}"
+  },
+  "onlineDemo": {
+    "es":"Demo en linea",
+    "en":"Online demo "
+  },
+  "onlineDemoAria": {
+    "es":"Demo en linea de {{ project }}",
+    "en":"Online demo of {{ project }}"
+  }
+}
