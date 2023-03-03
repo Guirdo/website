@@ -2,7 +2,7 @@
 title: "Mustalk"
 date: 2022-04-08 10:03:00 -06:00
 tags: [ReactJS,Personal]
-description: "A place where you can share your taste in music and talk about it with more details"
+description: "Un lugar donde puedes compartir tus gustos musicales y contar sobre eso con más detalles"
 screenshot: 'https://res.cloudinary.com/dyuo7wfyi/image/upload/v1677594695/website/projects/mustalk_ormvre.webp'
 promoted: true
 repoUrl: 'https://github.com/Guirdo/mustalk'
@@ -10,36 +10,36 @@ demoUrl: 'https://mustalk.vercel.app/home'
 stack: [JavaScript, SASS, NextJS,Redux,Supabase]
 ---
 
-This was personal project that is still on. The idea came to me because I was thinking about a lot about social networks and I wanted to know how to build one. This was a very exciting and amusing project to do.
+Este fue un proyecto personal que sigue funcionando. La idea llego a mi porque estaba reflexionando mucho sobre las redes sociales y quise saber como era crear una. Este fue un proyecto muy emocionante y entretenido.
 
-## Tech stack
+## Tecnologías utilizadas
 
-The technologies I used in this project and the reasons I chose them:
+Las tecnologías que use en este proyecto y las razones por las que las escogí:
 
-- **SASS:** I implemented the styles of this project with this technology with the BEMIT methodology, because I was learning them.
-- **NextJS:** As the previous one, I was learning this framework of **ReactJS**.
-- **Redux:** I used it for the general state management among the components.
-- **Supabase:** I used this one because I was looking for an alternative for firebase, and I loved it. Supabase helps to manage the authorization process with its API.
+- **SASS:** Implemente los estilos de este proyecto con esta tecnología con la metodología BEMIT, porque los estaba aprendiendo.
+- **NextJS:** Así como el anterior, estaba aprendiendo este framework de **ReactJS**.
+- **Redux:** Lo utilice para el manejo del estado general entre los componentes.
+- **Supabase:** Lo utilice porque estaba buscando una alternativa a firebase, y me encanto. Supabase me ayudo a manejar el proceso de autenticación con su API.
 
-## Features
+## Funcionalidades
 
-The main features of this project are: 
+Las principales funcionalidad de este proyecto son:
 
-- **Log in with a magic link:** Forget about creating a new password, just enter you email and you'll receive a magic link.
-- **Post a song you like:** Share to world what you are listening to right now and what you think about that song.
-- **Like, bookmark and share a post from another user**
-- **Edit your profile:** Add a profile photo, edit your bio and add a link to your website.
+- **Log in con un enlace mágico:** Olvídate de crear una nueva contraseña, solo ingresa tu email y recibirás un correo con un link para ingresar.
+- **Publica una canción que te guste:** Comparte con el mundo que es lo que estas escuchando justo ahora y que es lo que piensas sobre esa canción.
+- **Dale me gusta, guarda en marcadores y comparte la publicación de otro usuario**
+- **Edit your profile:** Añade una foto de perfil, edita tu biografía y añande un link a tu página web.
 
-## Pain points
+## Puntos debiles
 
-- The process of verification of a new user is poorly implemented and I got a lot of spam when I shared it in a facebook group. I'll improve it in the future.
-- Likes and bookmarks seen pretty easy when you just use them, but in the technical side they are complex. 
+- El proceso de verificación de nuevos usuarios esta pobremente implementado y llego mucho spam cuando compartí este proyecto en un grupo de facebook. Lo mejoraré en el futuro.
+- Los Me gusta y marcadores se ven bastante fácil cuando uno solos los usa, pero en la parte técnica son más complejos.
 
-## What I learned from this project
+## Lo que aprendí de este proyecto
 
-The most important things I learned from this project are:
+Las cosas más importantes que aprendí de este proyecto son:
 
-- How a Like and Bookmark processes work internally.
-- How the verification email process work.
-- How to implement my styles with SASS and the BEMIT methodology with a specific file and folder structure.
-- How to implement reducers and dispatchers in Redux.
+- Cómo los Me gusta y marcadores funcionan internamente.
+- Cómo funciona el proceso de verificación de correos electrónicos.
+- Cómo implementar mis estilos con SASS y la metodología BEMIT con una estructura especifica de archivos y carpetas.
+- Como implementar reducers y dispatchers en Redux.
