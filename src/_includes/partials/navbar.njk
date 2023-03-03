@@ -45,7 +45,8 @@
         href="{{ link.url }}" 
         lang="{{ link.lang }}"
         hreflang="{{ link.lang }}"
-        aria-label="{{ 'common.translateToLang' | i18n }} {{ 'common.'+link.lang | i18n }}"
+        {% set currentLang = 'common.'+link.lang %}
+        aria-label="{{ 'common.translateToLang' | i18n }} {{ currentLang | i18n }}"
       >
         {{ link.lang | upper }}
         {% if link.lang === 'es' %}
@@ -60,7 +61,8 @@
         href="{{ page.url }}"
         lang="{{ page.lang }}"
         hreflang="{{ page.lang }}"
-        aria-label="{{ 'common.'+currentLang | i18n }}"
+        {% set currentLang = 'common.'+page.lang %}
+        aria-label="{{ currentLang | i18n }}"
       >
         {{ page.lang | upper }}
         {% if page.lang === 'es' %}
