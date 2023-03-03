@@ -2,34 +2,34 @@
 title: "Impermabiental"
 date: 2022-02-15 19:41:00 -06:00
 tags: [ReactJS,Freelancing]
-description: "A landing page for a local business"
+description: "Una landing page para una empresa local"
 screenshot: 'https://res.cloudinary.com/dyuo7wfyi/image/upload/v1677534956/website/projects/imperambiental_omjwtr.webp'
 promoted: true
 demoUrl: 'https://imperambiental.com'
 stack: [JavaScript, ReactJS, CSS ]
 ---
 
-This local business contact a colleague and me to develop a landing page, in order to generate more trust to their clients. 
+Esta empresa local nos contacto a una colega y a mí para desarrollar una landing page, para generar más confianza en sus clientes.
 
-We set a death line of two weeks and we always kept in touch with these business women telling them about our progress and asking them their feedback about our decisions. 
+Propusimos entregarlo en dos semanas y siempre mantuvimos contacto con las señoritas que dirigen la empresa, contándoles sobre nuestro progreso y pidiéndoles retroalimentación sobre nuestras decisiones.
 
-## Tech stack
+## Tecnologías utilizadas
 
-- **ReactJS :** We took advantage of a component structure in order to reuse code.
+- **ReactJS :** Aprovechamos la estructura basada en componentes para reutilizar el código. 
 
-## Designing
+## Proceso de diseño
 
-We took inspiration from other similar companies' pages, and for the copy of the page they gave us a document and we also added our suggestions. 
+Nos inspiramos de otras páginas de empresas con giros similares, y para el texto (o copy) de la página, nos proporcionaron un documento con toda esa información y también añadimos nuestras sugerencias. 
 
-About the color palette, we extracted from their logo with <a href="https://color.adobe.com/create/image">Color Adobe</a>.
+Para la paleta de colores, con Color Adobe extraimos los colores de su logo.
 
 <iframe class="border-primary" width="100%" height="400" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F6rriFi8Bh1MJzrHpqRx8La%2FImperambiental%3Fnode-id%3D0%253A1%26t%3DIRlrt2TTjO57Oxs5-1" allowfullscreen></iframe>
 
-## What I learned from this project
+## Lo que aprendí en este proyecto
 
-For this project I needed to learn new things:
+Para este proyecto tuve que aprender cosas nuevas:
 
-- How to explain technical concepts to my clients in a simple way and how this is really important for conveying security to them. 
-- How to optimize the meta data from the page in order to improve its ranking in the search engine results.
-- Optimization of the images, with the modern format ```.webp``` that browsers prefer. 
-- Management of client's data and hosting services.
+- Cómo explicar conceptos técnicos a mis clientes de una forma simple y cómo esto es importante para transmitirles seguridad.
+- Cómo optimizar la metadata de la página para mejorar su posición en los resultados de búsqueda de los buscadores.
+- Optimización de imágenes con el formato ```.webp``` que los navegadores prefieren.
+- Manejo de la información de los clientes y servicios de hosting.
