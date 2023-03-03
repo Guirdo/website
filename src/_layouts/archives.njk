@@ -1,15 +1,15 @@
 {% extends "./default.njk" %}
-{% set currentType = page.url | split("/") | offset(1) | first %}
+{% set currentType = page.url | split("/") | offset(2) | first %}
 
 {% from "macros/projectCard.njk" import projectCard %}
 
 {% block content %}
   <div class="[ container-lg inner-container ] [ flex-column ] [ gap-xs flex-grow padding-xs ]">
-    <h1>{{ currentType | capitalize }}</h1>
+    <h1>{{ currentType | i18n | capitalize }}</h1>
     {% if currentType === 'projects' %}
       
       <div class="[ project-grid ] [ gap-md ]">
-        {% for item in collections.projects %}
+        {% for item in collections['projects_'+page.lang] %}
           {{ projectCard (
             title = item.data.title,
             screenshot = item.data.screenshot,

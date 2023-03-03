@@ -27,7 +27,7 @@ description: I'm a front-end developer who's looking an oportunity to join a gre
     <h2 class="[ mb-start-lg text-white ]">Projects</h2>
 
     <div class="[ project-grid ] [ gap-md ]">
-      {% for item in collections.promotedProjects %}
+      {% for item in collections['promotedProjects_'+page.lang]  %}
         {{ projectCard (
             title = item.data.title,
             screenshot = item.data.screenshot,

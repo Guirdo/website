@@ -27,7 +27,7 @@ description: Soy un desarrollador front-end que busca una oportunidad para unirm
     <h2 class="[ mb-start-lg text-white ]">Proyectos</h2>
 
     <div class="[ project-grid ] [ gap-md ]">
-      {% for item in collections.promotedProjects %}
+      {% for item in collections['promotedProjects_'+page.lang] %}
         {{ projectCard (
             title = item.data.title,
             screenshot = item.data.screenshot,
@@ -37,7 +37,7 @@ description: Soy un desarrollador front-end que busca una oportunidad para unirm
     </div>
 
     <a
-      href="/projects"
+      href="{{ "/projects/" | locale_url }}"
       class="[ flex-row ] [ text-inherit align-items-center padding-xs bg-white justify-content-evenly mb-end-lg w-fit-content ]"
       aria-label="View more projects"
     >

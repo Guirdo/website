@@ -1,13 +1,24 @@
 module.exports = {
-  projects: (collection) => {
+  projects_es: (collection) => {
     return collection
-      .getFilteredByGlob('./src/projects/**/*.md')
+      .getFilteredByGlob('./src/es/projects/**/*.md')
       .filter(item => !item.data.draft)
       .reverse()
   },
-  promotedProjects: (collection) => {
+  projects_en: (collection) => {
     return collection
-        .getFilteredByGlob('./src/projects/**/*.md')
+      .getFilteredByGlob('./src/en/projects/**/*.md')
+      .filter(item => !item.data.draft)
+      .reverse()
+  },
+  promotedProjects_es: (collection) => {
+    return collection
+        .getFilteredByGlob('./src/es/projects/**/*.md')
+        .filter(item => item.data.promoted)
+  },
+  promotedProjects_en: (collection) => {
+    return collection
+        .getFilteredByGlob('./src/en/projects/**/*.md')
         .filter(item => item.data.promoted)
   }
 }
