@@ -56,17 +56,17 @@ description: I'm a front-end developer who's looking an oportunity to join a gre
 
     <div class="[ contact-socials ] [ gap-xs ]">
       {% for item in social %}
-      {% if item.label %}
-        <a
+      <a
         class="[ flex-row ] [ bg-white gap-xs text-inherit align-items-center padding-xs ]"
         href="{{ item.url | url }}" 
-        aria-label="{{ item.label }}"
+        aria-label="{{ 'social.aria' | i18n({ social: item.name }) }}"
         target="_blank"
       >
-        {% include "icons/"+item.icon %}
-        <span class="fs-xs">{{ item.label }}</span>
+        {% set icon = "icons/"+item.name+".svg" %}
+        {% set name = 'social.'+item.name %}
+        {% include icon %}
+        <span class="fs-xs">{{ name | i18n }}</span>
       </a>
-      {% endif %}
       {% endfor %}
     </div>
   </div>
