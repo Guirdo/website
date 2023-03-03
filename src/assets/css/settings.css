@@ -4,7 +4,7 @@
 
   /* Color */
   --mermaid: hsl(265 52% 10%);
-  --roqueta: hsl(22 34% 48%);
+  --roqueta: hsl(18, 45%, 45%);
 
   --primary: hsl(265 52% 10%);
   --secondary: hsl(240, 6%, 52%);
@@ -34,7 +34,7 @@
 }
 
 :root:has(#roqueta:checked) {
-  --primary: hsl(22 34% 48%);
+  --primary: hsl(18, 45%, 45%);
   --secondary: 	hsl(214, 49%, 71%);
   --secondary-light-1:	hsl(194, 100%, 97%);
   --white: 	hsl(201, 35%, 92%);
