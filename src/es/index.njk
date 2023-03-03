@@ -1,31 +1,30 @@
 ---
 layout: home.njk
-title: Seb Méndez | Front-end developer
-description: "Welcome to my site"
-templateEngineOverride: njk
+title: Seb Méndez | Desarrollador front-end
+description: Soy un desarrollador front-end que busca una oportunidad para unirme a un gran equipo
 ---
 
 {% from "macros/projectCard.njk" import projectCard %}
 
 <section id="about-me" class="bg-secondary">
   <div class="[ container inner-container ] [ flex-column ] [ gap-md ]">
-    <h2>About me</h2>
+    <h2>Sobre mi</h2>
 
     <p>
-      I'm front-end developer from Mexico, I finished a computational system engineering degree and I'm looking for joining a great team who's working in useful and good-looking web app and pages.
+      Mi nombre es Seb Méndez, tambien conocido como guirdo. Soy un desarrollador front-end originario de México. He terminado una carrera en ingenieria en sistemas computacionales y estoy buscando unirme a un gran equipo que esta trabajando páginas y apps web geniales. 
     </p>
     <p>
-      Since 2019, I've been developing web sites which I found a way to express myself and to help others bring their ideas to life (Take a look to my work below).
+      Desde el 2019, he estado desarrollando páginas web con las cuales he encontrado una forma de expresarme y ayudar a otros a hacer sus ideas realidad (Mira mi trabajo más abajo).
     </p>
     <p>
-      In order to achieve this, every day I'm reading and studying about the last updates in the web environment and the best practices and I write about what I learn.
+      Me enfoco en los clasicos HTML, CSS y JavaScript (el segundo es mi favorito), además de que he estado contruyendo páginas web con ReactJS y NextJS.
     </p>
   </div>
 </section>
 
 <section id="projects" class="[ project-section ] [ bg-primary ]">
   <div class="[ container inner-container ] [ flex-column align-items-center ] [ gap-md ]">
-    <h2 class="[ mb-start-lg text-white ]">Projects</h2>
+    <h2 class="[ mb-start-lg text-white ]">Proyectos</h2>
 
     <div class="[ project-grid ] [ gap-md ]">
       {% for item in collections.promotedProjects %}
@@ -42,17 +41,17 @@ templateEngineOverride: njk
       class="[ flex-row ] [ text-inherit align-items-center padding-xs bg-white justify-content-evenly mb-end-lg w-fit-content ]"
       aria-label="View more projects"
     >
-      View more projects
+      Ver más proyectos
     </a>
   </div>
 </section>
 
 <section id="contact">
   <div class="[ container inner-container ] [ flex-column ] [ gap-md ]">
-    <h2 class="[ contact-section__title ] [ text-align-start fs-xlg ] ">Contact me!</h2>
+    <h2 class="[ contact-section__title ] [ text-align-start fs-xlg ] ">¡Contáctame!</h2>
 
     <p>
-      It would be cool if you send me a message or any doubt you get about my work or anything else. You can also contact me on my social networks.
+      Sería genial si me mandaras un mensaje o cualquier duda que tengas sobre mi trabajo o cualquier otra cosa. También puedes contactarme por mis redes sociales.
     </p>
 
     <div class="[ contact-socials ] [ gap-xs ]">

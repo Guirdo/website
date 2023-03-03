@@ -1,4 +1,5 @@
 const themes = require('./themes.json')
+const hero = require('./hero.json')
 
 module.exports = {
   es: {
@@ -30,4 +31,5 @@ module.exports = {
     'en':'Translate to'
   },
   themes,
+  hero,
 }
