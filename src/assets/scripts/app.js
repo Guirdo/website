@@ -1,7 +1,9 @@
 const menuButton = document.querySelector('#menuButton')
+const langButton = document.querySelector('#langButton')
 const themeButton = document.querySelector('#themeButton')
 
 const navbarLinks = document.querySelector('#navbarLinks')
+const langMenu = document.querySelector('#langMenu')
 const themeMenu = document.querySelector('#themeMenu')
 
 const colorThemes = document.querySelectorAll('[name="theme"]');
@@ -28,37 +30,41 @@ colorThemes.forEach((themeOption) => {
   });
 });
 
-const showMenu = () => {
-  navbarLinks.classList.add('visible')
+const showMenu = (element) => {
+  element.classList.add('visible')
 }
 
-const hideMenu = () => {
-  navbarLinks.classList.remove('visible')
-}
-
-const showThemeMenu = () => {
-  themeMenu.classList.add('visible')
-}
-
-const hideThemeMenu = () => {
-  themeMenu.classList.remove('visible')
+const hideMenu = (element) => {
+  element.classList.remove('visible')
 }
 
 menuButton.addEventListener('click', () => {
-  hideThemeMenu()
+  hideMenu(themeMenu)
+  hideMenu(langMenu)
   if (navbarLinks.classList.contains('visible')) {
-    hideMenu()
+    hideMenu(navbarLinks)
   } else {
-    showMenu()
+    showMenu(navbarLinks)
+  }
+})
+
+langButton.addEventListener('click', () => {
+  hideMenu(themeMenu)
+  hideMenu(navbarLinks)
+  if (langMenu.classList.contains('visible')) {
+    hideMenu(langMenu)
+  } else {
+    showMenu(langMenu)
   }
 })
 
 themeButton.addEventListener('click', () => {
-  hideMenu()
+  hideMenu(navbarLinks)
+  hideMenu(langMenu)
   if (themeMenu.classList.contains('visible')) {
-    hideThemeMenu()
+    hideMenu(themeMenu)
   } else {
-    showThemeMenu()
+    showMenu(themeMenu)
   }
 })
 

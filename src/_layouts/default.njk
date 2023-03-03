@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ page.lang }}" dir="ltr">
 <head>
   {% include "partials/head.njk" %}
 </head>
 <body class="flex-column">
-  {% include "partials/navbar.html" %}
+  {% include "partials/navbar.njk" %}
   
   <main class="[ flex-column ] [ flex-grow-2 ]">
     {% block content %}{% endblock %}

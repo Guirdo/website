@@ -1,0 +1,26 @@
+{
+  "aria": {
+    "es":"{{ social }} de Seb",
+    "en":"Seb's {{ social }}"
+  },
+  "email":{
+    "es":"Enviame un correo",
+    "en":"Send me an email"
+  },
+  "github":{
+    "es":"Revisa mi código",
+    "en":"Check out my code"
+  },
+  "codepen": {
+    "es":"Ve mis experimentos",
+    "en":"See my experiments"
+  },
+  "linkedIn": {
+    "es":"Conecta conmigo",
+    "en":"Connect with me"
+  },
+  "mastodon": {
+    "es":"Sigueme en mastodon",
+    "en":"Follow me on mastodon"
+  }
+}

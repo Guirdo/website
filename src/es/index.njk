@@ -1,0 +1,73 @@
+---
+layout: home.njk
+title: Seb Méndez | Desarrollador front-end
+description: Soy un desarrollador front-end que busca una oportunidad para unirme a un gran equipo
+---
+
+{% from "macros/projectCard.njk" import projectCard %}
+
+<section id="about-me" class="bg-secondary">
+  <div class="[ container inner-container ] [ flex-column ] [ gap-md ]">
+    <h2>Sobre mi</h2>
+
+    <p>
+      Mi nombre es Seb Méndez, tambien conocido como guirdo. Soy un desarrollador front-end originario de México. He terminado una carrera en ingenieria en sistemas computacionales y estoy buscando unirme a un gran equipo que esta trabajando páginas y apps web geniales. 
+    </p>
+    <p>
+      Desde el 2019, he estado desarrollando páginas web con las cuales he encontrado una forma de expresarme y ayudar a otros a hacer sus ideas realidad (Mira mi trabajo más abajo).
+    </p>
+    <p>
+      Me enfoco en los clasicos HTML, CSS y JavaScript (el segundo es mi favorito), además de que he estado contruyendo páginas web con ReactJS y NextJS.
+    </p>
+  </div>
+</section>
+
+<section id="projects" class="[ project-section ] [ bg-primary ]">
+  <div class="[ container inner-container ] [ flex-column align-items-center ] [ gap-md ]">
+    <h2 class="[ mb-start-lg text-white ]">Proyectos</h2>
+
+    <div class="[ project-grid ] [ gap-md ]">
+      {% for item in collections['promotedProjects_'+page.lang] %}
+        {{ projectCard (
+            title = item.data.title,
+            screenshot = item.data.screenshot,
+            url = item.url,
+            description = item.data.description ) }}
+      {% endfor %}
+    </div>
+
+    <a
+      href="{{ "/projects/" | locale_url }}"
+      class="[ flex-row ] [ text-inherit align-items-center padding-xs bg-white justify-content-evenly mb-end-lg w-fit-content ]"
+      aria-label="View more projects"
+    >
+      Ver más proyectos
+    </a>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="[ container inner-container ] [ flex-column ] [ gap-md ]">
+    <h2 class="[ contact-section__title ] [ text-align-start fs-xlg ] ">¡Contáctame!</h2>
+
+    <p>
+      Sería genial si me mandaras un mensaje o cualquier duda que tengas sobre mi trabajo o cualquier otra cosa. También puedes contactarme por mis redes sociales.
+    </p>
+
+    <div class="[ contact-socials ] [ gap-xs ]">
+      {% for item in social %}
+      <a
+        class="[ flex-row ] [ bg-white gap-xs text-inherit align-items-center padding-xs ]"
+        href="{{ item.url | url }}" 
+        aria-label="{{ 'social.aria' | i18n({ social: item.name }) }}"
+        target="_blank"
+      >
+        {% set icon = "icons/"+item.name+".svg" %}
+        {% set name = 'social.'+item.name %}
+        {% include icon %}
+        <span class="fs-xs">{{ name | i18n }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

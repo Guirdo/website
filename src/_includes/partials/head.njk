@@ -23,6 +23,16 @@
   crossorigin
 />
 
+<link rel="alternate" hreflang="{{ page.lang }}" href="{{ meta.url }}{{ page.url }}" />
+
+    {% for link in page.url | locale_links %}
+    <link
+      rel="alternate"
+      hreflang="{{ link.lang }}"
+      href="{{ meta.url }}{{ link.url }}"
+    />
+    {% endfor %}
+
 <script type="module" src="/assets/scripts/app.js" defer></script>
 
 <title>{{ title }}</title>

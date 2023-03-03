@@ -1,31 +1,22 @@
 [
   {
-    "platform": "Email",
-    "url": "mailto:aldo.seb.mendez@gmail.com",
-    "icon": "mail.svg",
-    "label": "Send me an email!"
+    "name": "email",
+    "url": "mailto:aldo.seb.mendez@gmail.com"
   },
   {
-    "platform": "Github",
-    "url": "https://github.com/Guirdo",
-    "icon": "github.svg",
-    "label": "Check out my code"
+    "name": "github",
+    "url": "https://github.com/Guirdo"
   },
   {
-    "platform": "Codepen",
-    "url": "https://codepen.io/Guirdo",
-    "icon": "codepen.svg"
+    "name": "linkedIn",
+    "url": "https://www.linkedin.com/in/seb-mendez/"
   },
   {
-    "platform": "LinkedIn",
-    "url": "https://www.linkedin.com/in/seb-mendez/",
-    "icon": "linkedin.svg",
-    "label": "Connect with me"
+    "name": "codepen",
+    "url": "https://codepen.io/Guirdo"
   },
   {
-    "platform": "Mastodon",
-    "url": "https://mstdn.mx/@guirdo",
-    "icon": "mastodon.svg",
-    "label": "Follow me on Mastodon"
+    "name": "mastodon",
+    "url": "https://mstdn.mx/@guirdo"
   }
 ]

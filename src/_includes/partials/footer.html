@@ -1,6 +1,6 @@
 <footer class="[ flex-row ] [ flex-wrap gap-md bg-primary text-white padding-xlg justify-content-evenly ]">
   <p class="text-align-center">
-    Made with ❤️ by Guirdo | 2022 - 2023
+    {{ 'common.madeWith' | i18n({ name: 'Seb Méndez' }) }} | 2022 - 2023
   </p>
 
   <nav>
@@ -10,11 +10,11 @@
         <a
           class="text-inherit"
           href="{{ item.url | url }}"
-          aria-label="Guirdo's {{ item.platform }}"
+          aria-label="{{ 'social.aria' | i18n({ social: item.name }) }}"
           target="_blank"
         >
           <span>
-            {% include 'icons/'+item.icon %}
+            {% include 'icons/'+item.name+".svg" %}
           </span>
         </a>
       </li>

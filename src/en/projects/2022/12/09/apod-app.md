@@ -1,7 +1,6 @@
 ---
 title: "APOD App"
 date: 2022-12-09 13:59:00 -06:00
-lang: en
 tags: [ReactJS,TechnicalTest]
 description: "This a nice front-end app for the Astronomical Picture Of the Day API from Nasa."
 screenshot: 'https://res.cloudinary.com/dyuo7wfyi/image/upload/v1677338686/website/projects/apod-app_i8d5c5.webp'
@@ -29,7 +28,7 @@ The main features of this project are:
 - **Shows the astronomical picture of the day:** The first thing you see is the today's astronomical picture with its title, description and credits.
 - **You can enter a different date:** Right above the picture, there is an date input where you can enter a different date, as long as that date is from 1995-06-16 to the current day.
 - **Quality of the picture:** In the top right corner there is a switch which you can select the quality of the images that are displayed.
-- **Play the Astronomical Video:** There also are days when there is a video instead of a image, so below the thumbnail will be a button to open a modal for watching it.
+- **Play the Astronomical Video of the Day:** There also are days when there is a video instead of a image, so below the thumbnail will be a button to open a modal for watching it.
 - **Random picture:** Every time you open this page it gives you a picture from a random date.
 - **Share with friends:** There is a sharing button which you can share the current picture with just a link.
 
@@ -37,6 +36,6 @@ The main features of this project are:
 
 The most important things I learned from this project are:
 
-- To implement my own modals and their styles. I read some article and videos to do it.
+- To implement my own modals and their styles.
 - To implement a custom switch with a checkbox input. 
 - To customize the scrollbar.

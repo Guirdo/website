@@ -1,0 +1,26 @@
+{
+  "greeting1":{
+    "es":"¡Hola!",
+    "en":"Hey, there!"
+  },
+  "greeting2": {
+    "es":"Soy Seb Méndez",
+    "en":"I'm Seb Méndez"
+  },
+  "greeting3": {
+    "es":"Desarrollador front-end",
+    "en":"Front-end developer"
+  },
+  "presentation": {
+    "es":"que hace realidad diseños web geniales",
+    "en":"who brings great web designs to life"
+  },
+  "see-more": {
+    "es":"Ver más",
+    "en":"See more"
+  },
+  "contact":{
+    "es":"Contactame",
+    "en":"Contact me"
+  }
+}
