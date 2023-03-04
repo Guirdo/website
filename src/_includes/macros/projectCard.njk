@@ -1,8 +1,8 @@
-{% macro projectCard(lang = "en", title = false, screenshot = false, url = false, description = false) %}
+{% macro projectCard(lang = "en", title = false, featuredImage = false, url = false, description = false) %}
   <article class="[ flex-column ] [ bg-white text-dark border-primary h-100 ]">
     <figure class="border-bottom-primary">
       <img
-        src="{{ screenshot | url }}"
+        src="{{ featuredImage | url }}"
         alt="Screenshot of {{ title }}"
         width="100%"
         height="auto">

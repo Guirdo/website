@@ -30,7 +30,7 @@ description: Soy un desarrollador front-end que busca una oportunidad para unirm
       {% for item in collections['promotedProjects_'+page.lang] %}
         {{ projectCard (
             title = item.data.title,
-            screenshot = item.data.screenshot,
+            featuredImage = item.data.featuredImage,
             url = item.url,
             description = item.data.description ) }}
       {% endfor %}

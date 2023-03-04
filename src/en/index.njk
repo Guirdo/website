@@ -30,7 +30,7 @@ description: I'm a front-end developer who's looking an oportunity to join a gre
       {% for item in collections['promotedProjects_'+page.lang]  %}
         {{ projectCard (
             title = item.data.title,
-            screenshot = item.data.screenshot,
+            featuredImage = item.data.featuredImage,
             url = item.url,
             description = item.data.description ) }}
       {% endfor %}

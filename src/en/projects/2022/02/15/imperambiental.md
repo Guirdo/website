@@ -3,7 +3,7 @@ title: "Impermabiental"
 date: 2022-02-15 19:41:00 -06:00
 tags: [ReactJS,Freelancing]
 description: "A landing page for a local business"
-screenshot: 'https://res.cloudinary.com/dyuo7wfyi/image/upload/v1677534956/website/projects/imperambiental_omjwtr.webp'
+featuredImage: 'https://res.cloudinary.com/dyuo7wfyi/image/upload/v1677534956/website/projects/imperambiental_omjwtr.webp'
 promoted: true
 demoUrl: 'https://imperambiental.com'
 stack: [JavaScript, ReactJS, CSS ]
