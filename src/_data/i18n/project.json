@@ -4,7 +4,7 @@
     "en":"Check the code"
   },
   "checkCodeAria": {
-    "es":"Revisa el codigo de {{ project }}",
+    "es":"Revisa el código de {{ project }}",
     "en":"Check the code of {{ project }}"
   },
   "onlineDemo": {

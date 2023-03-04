@@ -30,7 +30,7 @@ Las principales funcionalidad de este proyecto son:
 - **Dale me gusta, guarda en marcadores y comparte la publicación de otro usuario**
 - **Edit your profile:** Añade una foto de perfil, edita tu biografía y añande un link a tu página web.
 
-## Puntos debiles
+## Puntos débiles
 
 - El proceso de verificación de nuevos usuarios esta pobremente implementado y llego mucho spam cuando compartí este proyecto en un grupo de facebook. Lo mejoraré en el futuro.
 - Los Me gusta y marcadores se ven bastante fácil cuando uno solos los usa, pero en la parte técnica son más complejos.

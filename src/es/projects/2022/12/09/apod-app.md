@@ -32,7 +32,7 @@ Las principales funcionalidades de este proyecto son:
 - **Imagen aleatoria:** Cada vez que abras esta pagina te dará una imagen diferente de una fecha aleatoria.
 - **Comparte con amigos:** Cuenta con un botón para compartir con el cual puedes compartir la imagen actual con un simple link.
 
-## Lo qué aprendí de este proyecto
+## Lo que aprendí de este proyecto
 
 Lo más importante que aprendí de este proyecto fue:
 
