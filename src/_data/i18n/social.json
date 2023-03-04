@@ -4,7 +4,7 @@
     "en":"Seb's {{ social }}"
   },
   "email":{
-    "es":"Enviame un correo",
+    "es":"Envíame un correo",
     "en":"Send me an email"
   },
   "github":{
@@ -20,7 +20,7 @@
     "en":"Connect with me"
   },
   "mastodon": {
-    "es":"Sigueme en mastodon",
+    "es":"Sígueme en mastodon",
     "en":"Follow me on mastodon"
   }
 }
