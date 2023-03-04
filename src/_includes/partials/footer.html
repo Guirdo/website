@@ -12,6 +12,7 @@
           href="{{ item.url | url }}"
           aria-label="{{ 'social.aria' | i18n({ social: item.name }) }}"
           target="_blank"
+          rel="me"
         >
           <span>
             {% include 'icons/'+item.name+".svg" %}
