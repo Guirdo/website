@@ -13,7 +13,7 @@
         {% for item in collections['projects_'+page.lang] %}
           {{ projectCard (
             title = item.data.title,
-            screenshot = item.data.screenshot,
+            featuredImage = item.data.featuredImage,
             url = item.url,
             description = item.data.description ) }}
         {% endfor %}

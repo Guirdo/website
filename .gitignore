@@ -2,5 +2,6 @@ node_modules
 dist
 .vscode
 _site
+.env
 # Local Netlify folder
 .netlify

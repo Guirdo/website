@@ -5,7 +5,13 @@ layout: "base.njk"
 <article class="[ container inner-container ] [ flex-column ] [ gap-xs bg-white padding-sm padding-block-xs ]">
   <header class="[ flex-column ] [ gap-xs ]">
     <picture class="lg-w-75 w-100 align-self-center">
-      <img class="border-primary" src="{{ screenshot | url }}" alt="Screenshot of {{ title }}" width="100%" height="auto"></picture>
+      <img
+        class="border-primary"
+        src="{{ featuredImage | url }}"
+        alt="Screenshot of {{ title }}"
+        width="100%"
+        height="auto"
+      ></picture>
       <div>
         <h1>{{ title }}</h1>
         <p>

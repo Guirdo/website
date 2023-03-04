@@ -3,7 +3,7 @@ title: "Mustalk"
 date: 2022-04-08 10:03:00 -06:00
 tags: [ReactJS,Personal]
 description: "Un lugar donde puedes compartir tus gustos musicales y contar sobre eso con más detalles"
-screenshot: 'https://res.cloudinary.com/dyuo7wfyi/image/upload/v1677594695/website/projects/mustalk_ormvre.webp'
+featuredImage: 'https://res.cloudinary.com/dyuo7wfyi/image/upload/v1677594695/website/projects/mustalk_ormvre.webp'
 promoted: true
 repoUrl: 'https://github.com/Guirdo/mustalk'
 demoUrl: 'https://mustalk.vercel.app/home'

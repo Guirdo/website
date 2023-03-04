@@ -20,6 +20,12 @@ module.exports = function (eleventyConfig) {
     });
   });
 
+  /* -------- Plugins --------  */
+  glob.sync('./config/template-languages/*.js').forEach((file) => {
+    let plugin = require('./' + file)
+    eleventyConfig.addPlugin(plugin)
+  });
+
   eleventyConfig.addPlugin(EleventyI18nPlugin, {
     defaultLanguage: 'es'
   });
@@ -30,9 +36,6 @@ module.exports = function (eleventyConfig) {
       '*': 'es'
     }
   });
-
-  eleventyConfig.addPlugin(require('./config/template-languages/css-config.js'))
-  eleventyConfig.addPlugin(require('./config/template-languages/js-config.js'))
 
   eleventyConfig.addWatchTarget('./src/assets');
   
