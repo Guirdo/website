@@ -11,6 +11,6 @@ module.exports = function () {
       mastodonLink: 'https://mstdn.mx/@guirdo',
       twitterHandle: '@guirdo21'
     },
-    defaultFeaturedImage: '#'
+    defaultFeaturedImage: 'https://res.cloudinary.com/dyuo7wfyi/image/upload/v1677961000/website/og_image_hwkr2m.webp'
   }
 }
