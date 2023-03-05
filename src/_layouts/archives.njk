@@ -2,22 +2,38 @@
 {% set currentType = page.url | split("/") | offset(2) | first %}
 
 {% from "macros/projectCard.njk" import projectCard %}
+{% from "macros/articleCard.njk" import articleCard %}
 
 {% block content %}
   <div class="[ container-lg inner-container ] [ flex-column ] [ gap-xs flex-grow padding-xs ]">
     {% set translation = 'common.'+currentType %}
     <h1>{{ translation | i18n }}</h1>
+
+
+    <div class="[ archive-grid  ] [ gap-md ]">
     {% if currentType === 'projects' %}
-      
-      <div class="[ project-grid ] [ gap-md ]">
-        {% for item in collections['projects_'+page.lang] %}
-          {{ projectCard (
-            title = item.data.title,
-            featuredImage = item.data.featuredImage,
-            url = item.url,
-            description = item.data.description ) }}
-        {% endfor %}
-        </div>
-      {% endif %}
+
+    {% for item in collections['projects_'+page.lang] %}
+      {{ projectCard (
+        title = item.data.title,
+        featuredImage = item.data.featuredImage,
+        url = item.url,
+        description = item.data.description ) }}
+    {% endfor %}
+
+    {% elif currentType === 'articles' %}
+
+    {% for item in collections['articles_'+page.lang] %}
+      {{ articleCard (
+        title = item.data.title,
+        date = item.data.date,
+        featuredImage = item.data.featuredImage,
+        url = item.url,
+        description = item.data.description ) }}
+    {% endfor %}
+    
+    {% endif %}
     </div>
+    
+  </div>
   {% endblock %}
