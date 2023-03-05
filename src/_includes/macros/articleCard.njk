@@ -1,11 +1,20 @@
-{% macro articleCard(title = false,date = false, featuredImage = false, url = false, description = false) %}
+{% macro articleCard(
+  title = false,
+  date = false,
+  featuredImage = false,
+  featuredImageAlt = '',
+  url = false,
+  description = false
+) %}
   <article class="[ flex-column ] [ bg-white text-dark border-primary h-100 ]">
     <figure class="border-bottom-primary">
       <img
         src="{{ featuredImage | url }}"
-        alt="Screenshot of {{ title }}"
+        alt="{{ featuredImageAlt }}"
         width="100%"
-        height="auto">
+        height="auto"
+        loading="lazy"
+      >
     </figure>
     <div class="[ flex-column ] [ padding-xs gap-xs flex-grow ]">
       <h3>
