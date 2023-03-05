@@ -1,4 +1,4 @@
-{% macro projectCard(title = false, featuredImage = false, url = false, description = false) %}
+{% macro articleCard(title = false,date = false, featuredImage = false, url = false, description = false) %}
   <article class="[ flex-column ] [ bg-white text-dark border-primary h-100 ]">
     <figure class="border-bottom-primary">
       <img
@@ -8,12 +8,15 @@
         height="auto">
     </figure>
     <div class="[ flex-column ] [ padding-xs gap-xs flex-grow ]">
-      <h3 class="project-card__title">
+      <h3>
         <a class="text-inherit" href="{{ url | url }}" aria-label="Learn more about {{ title }}">
           {{ title }}
         </a>
       </h3>
       <p class="fs-xs">{{ description }}</p>
+      <p class="fs-xs">
+        <time date="{{ date }}">{{ date | formatDateYYYYMMDD }}</time>
+      </p>
     </div>
   </article>
 {% endmacro %}
