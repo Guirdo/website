@@ -1,39 +1,22 @@
 {% extends "./default.njk" %}
 {% set currentType = page.url | split("/") | offset(2) | first %}
 
-{% from "macros/projectCard.njk" import projectCard %}
-{% from "macros/articleCard.njk" import articleCard %}
+{% from "macros/archiveGrid.njk" import archiveGrid %}
 
 {% block content %}
   <div class="[ container-lg inner-container ] [ flex-column ] [ gap-xs flex-grow padding-xs ]">
     {% set translation = 'common.'+currentType %}
     <h1>{{ translation | i18n }}</h1>
 
-
-    <div class="[ archive-grid  ] [ gap-md ]">
     {% if currentType === 'projects' %}
-
-    {% for item in collections['projects_'+page.lang] %}
-      {{ projectCard (
-        title = item.data.title,
-        featuredImage = item.data.featuredImage,
-        url = item.url,
-        description = item.data.description ) }}
-    {% endfor %}
+    <p>{{ 'archive.projects' | i18n }}</p>
+    {{ archiveGrid(type = currentType,collection = collections['projects_'+page.lang]) }}
 
     {% elif currentType === 'articles' %}
+    <p>{{ 'archive.articles' | i18n }}</p>
+    {{ archiveGrid(type = currentType,collection = collections['articles_'+page.lang]) }}
 
-    {% for item in collections['articles_'+page.lang] %}
-      {{ articleCard (
-        title = item.data.title,
-        date = item.data.date,
-        featuredImage = item.data.featuredImage,
-        url = item.url,
-        description = item.data.description ) }}
-    {% endfor %}
-    
     {% endif %}
-    </div>
     
   </div>
   {% endblock %}

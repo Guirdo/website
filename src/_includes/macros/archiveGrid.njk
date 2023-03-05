@@ -1,0 +1,25 @@
+{% from "macros/projectCard.njk" import projectCard %}
+{% from "macros/articleCard.njk" import articleCard %}
+
+{% macro archiveGrid(type = '', collection) %}
+  <div class="[ archive-grid ] [ gap-md ]">
+    {% if type === 'projects' %}
+      {% for item in collection %}
+        {{ projectCard (
+          title = item.data.title,
+          featuredImage = item.data.featuredImage,
+          url = item.url,
+          description = item.data.description ) }}
+      {% endfor %}
+    {% elif type === 'articles' %}
+      {% for item in collection %}
+        {{ articleCard (
+          title = item.data.title,
+          date = item.data.date,
+          featuredImage = item.data.featuredImage,
+          url = item.url,
+          description = item.data.description ) }}
+      {% endfor %}
+    {% endif %}
+  </div>
+{% endmacro %}
