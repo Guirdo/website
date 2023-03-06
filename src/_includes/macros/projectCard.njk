@@ -3,7 +3,8 @@
   featuredImage = false,
   featuredImageAlt = '',
   url = false,
-  description = false
+  description = false,
+  stack
 ) %}
   <article class="[ flex-column ] [ bg-white text-dark border-primary h-100 ]">
     <figure class="border-bottom-primary">
@@ -21,7 +22,10 @@
           {{ title }}
         </a>
       </h3>
-      <p class="fs-xs">{{ description }}</p>
+      <p class="fs-xs flex-grow">{{ description }}</p>
+      <p class="fs-xxs">
+        <strong>Stack: </strong> {{ stack | joiner(', ') }}
+      </p>
     </div>
   </article>
 {% endmacro %}

@@ -4,7 +4,8 @@
   featuredImage = false,
   featuredImageAlt = '',
   url = false,
-  description = false
+  description = false,
+  tags
 ) %}
   <article class="[ flex-column ] [ bg-white text-dark border-primary h-100 ]">
     <figure class="border-bottom-primary">
@@ -22,10 +23,19 @@
           {{ title }}
         </a>
       </h3>
+      <ul class="[ flex-row ] [ text-dark gap-xxs list-style-none ]">
+        <li class="fs-xxs">
+          <time date="{{ date }}">{{ date | formatDateYYYYMMDD }}</time>
+        </li>
+        <li class="fs-xxs">
+          <span>{% include "icons/small/tag.svg" %}</span>
+          {# {{ tags | turnAnchorTag | joiner(', ') | safe }} #}
+          {% for tag in tags %}
+            <a>{{ tag }}</a>
+          {% endfor %}
+        </li>
+      </ul>
       <p class="fs-xs">{{ description }}</p>
-      <p class="fs-xs">
-        <time date="{{ date }}">{{ date | formatDateYYYYMMDD }}</time>
-      </p>
     </div>
   </article>
 {% endmacro %}
