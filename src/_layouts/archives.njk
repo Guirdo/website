@@ -1,4 +1,4 @@
-{% extends "./default.njk" %}
+{% extends "./base.njk" %}
 {% set currentType = page.url | split("/") | offset(2) | first %}
 
 {% from "macros/archiveGrid.njk" import archiveGrid %}

@@ -1,5 +1,35 @@
 ---
-layout: "default.njk"
+layout: "base.njk"
 ---
 
-<h1>{{ title }}</h1>
+<article class="[ container inner-container ] [ flex-column ] [ gap-xs bg-white padding-sm padding-block-xs ]">
+  <header class="[ flex-column ] [ gap-xs ]">
+      <div>
+        <h1>{{ title }}</h1>
+        <p>
+          <em class="fs-xs">{{ description }}</em>
+        </p>
+      </div>
+      <div class="flex-row flex-wrap gap-xs">
+        <p class="fs-xxs">
+          {{ 'article.publishedOn' | i18n }}
+          <time date="{{ date }}">{{ date | formatDateYYYYMMDD }}</time>
+        </p>
+        <p class="fs-xxs">
+          <span>{% include "icons/small/tag.svg" %}</span>
+          {# {{ tags | turnAnchorTag | joiner(', ') | safe }} #}
+          {% for tag in tags %}
+            <a>{{ tag }}</a>
+          {% endfor %}
+        </p>
+      </div>
+    </header>
+    <hr>
+      <main class="[ article ] [ flex-column ] [ fs-xs gap-xxs ]">
+        {{ content | safe }}
+      </main>
+      <hr>
+      <footer>
+        {% block references %}{% endblock %}
+      </footer>
+    </article>
