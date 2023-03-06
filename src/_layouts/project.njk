@@ -49,16 +49,16 @@ layout: "base.njk"
       </div>
       <div class="flex-row flex-wrap gap-xs">
         <p class="fs-xxs">
-        Created on:
-        <time date="{{ date }}">{{ date | formatDateYYYYMMDD }}</time>
-      </p>
-      <p class="fs-xxs">
-        <span>{% include "icons/small/tag.svg" %}</span>
-        {# {{ tags | turnAnchorTag | joiner(', ') | safe }} #}
-        {% for tag in tags %}
-          <a>{{ tag }}</a>
-        {% endfor %}
-      </p>
+          {{ 'project.createdOn' | i18n }}
+          <time date="{{ date }}">{{ date | formatDateYYYYMMDD }}</time>
+        </p>
+        <p class="fs-xxs">
+          <span>{% include "icons/small/tag.svg" %}</span>
+          {# {{ tags | turnAnchorTag | joiner(', ') | safe }} #}
+          {% for tag in tags %}
+            <a>{{ tag }}</a>
+          {% endfor %}
+        </p>
       </div>
     </header>
     <hr>
