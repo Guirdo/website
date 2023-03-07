@@ -4,32 +4,42 @@ layout: "base.njk"
 
 <article class="[ container inner-container ] [ flex-column ] [ gap-xs bg-white padding-sm padding-block-xs ]">
   <header class="[ flex-column ] [ gap-xs ]">
-      <div>
-        <h1>{{ title }}</h1>
-        <p>
-          <em class="fs-xs">{{ description }}</em>
-        </p>
-      </div>
-      <div class="flex-row flex-wrap gap-xs">
-        <p class="fs-xxs">
-          {{ 'article.publishedOn' | i18n }}
-          <time date="{{ date }}">{{ date | formatDateYYYYMMDD }}</time>
-        </p>
-        <p class="fs-xxs">
-          <span>{% include "icons/small/tag.svg" %}</span>
-          {# {{ tags | turnAnchorTag | joiner(', ') | safe }} #}
-          {% for tag in tags %}
-            <a>{{ tag }}</a>
-          {% endfor %}
-        </p>
-      </div>
-    </header>
-    <hr>
-      <main class="[ article ] [ flex-column ] [ fs-xs gap-xxs ]">
-        {{ content | safe }}
-      </main>
-      <hr>
-      <footer>
-        {% block references %}{% endblock %}
-      </footer>
-    </article>
+    <div>
+      <h1>{{ title }}</h1>
+      <p>
+        <em class="fs-xs">{{ description }}</em>
+      </p>
+    </div>
+    <div class="flex-row flex-wrap gap-xs">
+      <p class="fs-xxs">
+        {{ 'article.publishedOn' | i18n }}
+        <time date="{{ date }}">{{ date | formatDateYYYYMMDD }}</time>
+      </p>
+      <p class="fs-xxs">
+        <span>{% include "icons/small/tag.svg" %}</span>
+        {# {{ tags | turnAnchorTag | joiner(', ') | safe }} #}
+        {% for tag in tags %}
+          <a>{{ tag }}</a>
+        {% endfor %}
+      </p>
+    </div>
+  </header>
+  <hr>
+  <main class="[ article ] [ flex-column ] [ fs-xs gap-xxs ]">
+    {{ content | safe }}
+  </main>
+  <hr>
+  <footer>
+    {% block references %}{% endblock %}
+
+    <p class="fs-xxs">
+      {{ 'common.encourageContribution1' | i18n }}
+      <a
+        href="https://github.com/Guirdo/website/tree/main/src{{ page.inputPath }}"
+      >
+        {% include "icons/small/github.svg" %}
+        {{ 'common.encourageContribution2' | i18n }}
+      </a>
+    </p>
+  </footer>
+</article>
