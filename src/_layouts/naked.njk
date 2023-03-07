@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang }}" dir="ltr">
+<head>
+  {% include "partials/head.njk" %}
+</head>
+<body class="flex-column align-items-center">  
+  <main class="[ flex-column ] [ gap-sm justify-content-center flex-grow-2 align-items-center ]">
+    {{ content | safe }}
+  </main>
+</body>
+</html>

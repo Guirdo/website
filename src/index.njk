@@ -1,11 +1,37 @@
 ---
-layout: base.njk
+layout: naked.njk
 title: Seb Méndez | Desarrollador front-end
 description: Soy un desarrollador front-end que busca una oportunidad para unirme a un gran equipo
 ---
 
-<h2>You are not supposed to be here 😕</h2>
-<h2>Please, go back <a href="/en">home</a></h2>
+<h1>guirdo.xyz</h1>
 
-<h2>No se supone que este aquí 😕</h2>
-<h2>Por favor, regresa a <a href="/es">casa</a></h2>
+<div class="text-align-center">
+  <h2>You are not supposed to be here 😕</h2>
+  <h2>Please, go back <a href="/en">home</a></h2>
+</div>
+
+<div class="text-align-center">
+  <h2>No se supone que estes aquí 😕</h2>
+  <h2>Por favor, regresa a <a href="/es">casa</a></h2>
+</div>
+
+<nav>
+    <ul class="[ flex-row ] [ gap-sm list-style-none ]">
+      {% for item in social %}
+      <li>
+        <a
+          class="text-inherit"
+          href="{{ item.url | url }}"
+          aria-label="{{ item.name }}"
+          target="_blank"
+          rel="me"
+        >
+          <span>
+            {% include 'icons/'+item.name+".svg" %}
+          </span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
