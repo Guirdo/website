@@ -35,7 +35,8 @@ layout: "base.njk"
     <p class="fs-xxs">
       {{ 'common.encourageContribution1' | i18n }}
       <a
-        href="https://github.com/Guirdo/website/tree/main/src{{ page.inputPath }}"
+        class="text-inherit"
+        href="https://github.com/Guirdo/website/tree/main/{{ page.inputPath }}"
       >
         {% include "icons/small/github.svg" %}
         {{ 'common.encourageContribution2' | i18n }}
