@@ -4,52 +4,53 @@ layout: "base.njk"
 
 <article class="[ container inner-container ] [ flex-column ] [ gap-xs bg-white padding-sm padding-block-xs ]">
   <header class="[ flex-column ] [ gap-xs ]">
-    <picture class="lg-w-75 w-100 align-self-center">
+    <figure class="lg-w-75 w-100 align-self-center">
       <img
         class="border-primary"
         src="{{ featuredImage | url }}"
         alt="Screenshot of {{ title }}"
         width="100%"
         height="auto"
-      ></picture>
-      <div>
-        <h1>{{ title }}</h1>
-        <p>
-          <em class="fs-xs">{{ description }}</em>
-        </p>
-        <p>
-          <small class="fs-xs">
-            <b>Stack:
-            </b>
-            {{ stack | joiner(', ') }}
-          </small>
-        </p>
-        <div class="flex-row gap-xs flex-wrap">
-          {% if repoUrl %}
-            <a
-              class="fs-xs text-inherit align-items-center" 
-              href="{{ repoUrl | url }}" 
-              target="_blank"
-              aria-label="{{ 'project.checkCodeAria' | i18n({ project: title }) }}"
-            >
-              {% include "icons/small/github.svg" %} {{ 'project.checkCode' | i18n }}
-            </a>
-          {% endif %}
-          {% if demoUrl %}
-            <a
-              class="fs-xs text-inherit" 
-              href="{{ demoUrl | url }}" 
-              target="_blank"
-              aria-label="{{ 'project.onlineDemoAria' | i18n({ project: title }) }}"
-            >
-              {% include "icons/small/internet.svg" %} {{ 'project.onlineDemo' | i18n }}
-            </a>
-          {% endif %}
-        </div>
+      >
+    </figure>
+    <div>
+      <h1>{{ title }}</h1>
+      <p>
+        <em class="fs-xs">{{ description }}</em>
+      </p>
+      <p>
+        <small class="fs-xs">
+          <b>Stack:
+          </b>
+          {{ stack | joiner(', ') }}
+        </small>
+      </p>
+      <div class="flex-row gap-xs flex-wrap">
+        {% if repoUrl %}
+          <a
+            class="fs-xs text-inherit align-items-center" 
+            href="{{ repoUrl | url }}" 
+            target="_blank"
+            aria-label="{{ 'project.checkCodeAria' | i18n({ project: title }) }}"
+          >
+            {% include "icons/small/github.svg" %} {{ 'project.checkCode' | i18n }}
+          </a>
+        {% endif %}
+        {% if demoUrl %}
+          <a
+            class="fs-xs text-inherit" 
+            href="{{ demoUrl | url }}" 
+            target="_blank"
+            aria-label="{{ 'project.onlineDemoAria' | i18n({ project: title }) }}"
+          >
+            {% include "icons/small/internet.svg" %} {{ 'project.onlineDemo' | i18n }}
+          </a>
+        {% endif %}
       </div>
-      <div class="flex-row flex-wrap gap-xs">
-        <p class="fs-xxs">
-        Created on:
+    </div>
+    <div class="flex-row flex-wrap gap-xs">
+      <p class="fs-xxs">
+        {{ 'project.createdOn' | i18n }}
         <time date="{{ date }}">{{ date | formatDateYYYYMMDD }}</time>
       </p>
       <p class="fs-xxs">
@@ -59,14 +60,24 @@ layout: "base.njk"
           <a>{{ tag }}</a>
         {% endfor %}
       </p>
-      </div>
-    </header>
-    <hr>
-      <main class="[ article ] [ flex-column ] [ fs-xs gap-xxs ]">
-        {{ content | safe }}
-      </main>
-      <hr>
-      <footer>
-        {% block references %}{% endblock %}
-      </footer>
+    </div>
+  </header>
+  <hr>
+  <main class="[ article ] [ flex-column ] [ fs-xs gap-xxs ]">
+    {{ content | safe }}
+  </main>
+  <hr>
+  <footer>
+    {% block references %}{% endblock %}
+    <p class="fs-xxs">
+      {{ 'common.encourageContribution1' | i18n }}
+      <a
+        class="text-inherit"
+        href="https://github.com/Guirdo/website/tree/main/{{ page.inputPath }}"
+      >
+        {% include "icons/small/github.svg" %}
+        {{ 'common.encourageContribution2' | i18n }}
+      </a>
+    </p>
+  </footer>
     </article>

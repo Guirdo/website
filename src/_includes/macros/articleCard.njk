@@ -1,10 +1,11 @@
-{% macro projectCard(
+{% macro articleCard(
   title = false,
+  date = false,
   featuredImage = false,
   featuredImageAlt = '',
   url = false,
   description = false,
-  stack
+  tags
 ) %}
   <article class="[ flex-column ] [ bg-white text-dark border-primary h-100 ]">
     <figure class="border-bottom-primary">
@@ -17,15 +18,24 @@
       >
     </figure>
     <div class="[ flex-column ] [ padding-xs gap-xs flex-grow ]">
-      <h3 class="project-card__title">
+      <h3>
         <a class="text-inherit" href="{{ url | url }}" aria-label="Learn more about {{ title }}">
           {{ title }}
         </a>
       </h3>
-      <p class="fs-xs flex-grow">{{ description }}</p>
-      <p class="fs-xxs">
-        <strong>Stack: </strong> {{ stack | joiner(', ') }}
-      </p>
+      <ul class="[ flex-row ] [ text-dark gap-xxs list-style-none ]">
+        <li class="fs-xxs">
+          <time date="{{ date }}">{{ date | formatDateYYYYMMDD }}</time>
+        </li>
+        <li class="fs-xxs">
+          <span>{% include "icons/small/tag.svg" %}</span>
+          {# {{ tags | turnAnchorTag | joiner(', ') | safe }} #}
+          {% for tag in tags %}
+            <a>{{ tag }}</a>
+          {% endfor %}
+        </li>
+      </ul>
+      <p class="fs-xs">{{ description }}</p>
     </div>
   </article>
 {% endmacro %}

@@ -7,6 +7,10 @@ module.exports = eleventyConfig => {
     outputFileExtension: 'js',
     compile: async (content, path) => {
       return async () => {
+        if(path.endsWith('.11tydata.js')){
+          return 
+        }
+
         let output = await esbuild.build({
           target: 'es2020',
           entryPoints: [path],

@@ -14,5 +14,9 @@
   "onlineDemoAria": {
     "es":"Demo en linea de {{ project }}",
     "en":"Online demo of {{ project }}"
+  },
+  "createdOn": {
+    "es":"Creado el: ",
+    "en":"Created on: "
   }
 }

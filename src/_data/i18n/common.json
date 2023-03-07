@@ -30,5 +30,17 @@
   "translateToLang": {
     "es":"Traducir al",
     "en":"Translate to"
+  },
+  "articles": {
+    "es":"Artículos",
+    "en":"Articles"
+  },
+  "encourageContribution1": {
+    "es":"¿Encontraste un error o quieres modificar algo?",
+    "en":"Did you find an error or want to modify anything?"
+  },
+  "encourageContribution2": {
+    "es":"No dudes en hacer un Pull Request",
+    "en":"Feel free to do a Pull Request"
   }
 }

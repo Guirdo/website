@@ -4,7 +4,7 @@ title: Seb Méndez | Desarrollador front-end
 description: Soy un desarrollador front-end que busca una oportunidad para unirme a un gran equipo
 ---
 
-{% from "macros/projectCard.njk" import projectCard %}
+{% from "macros/archiveGrid.njk" import archiveGrid %}
 
 <section id="about-me" class="bg-secondary">
   <div class="[ container inner-container ] [ flex-column ] [ gap-md ]">
@@ -26,15 +26,9 @@ description: Soy un desarrollador front-end que busca una oportunidad para unirm
   <div class="[ container inner-container ] [ flex-column align-items-center ] [ gap-md ]">
     <h2 class="[ mb-start-lg text-white ]">Proyectos</h2>
 
-    <div class="[ project-grid ] [ gap-md ]">
-      {% for item in collections['promotedProjects_'+page.lang] %}
-        {{ projectCard (
-            title = item.data.title,
-            featuredImage = item.data.featuredImage,
-            url = item.url,
-            description = item.data.description ) }}
-      {% endfor %}
-    </div>
+    {{ 
+      archiveGrid(type = 'projects', collection = collections['promotedProjects_'+page.lang])
+    }}
 
     <a
       href="{{ "/projects/" | locale_url }}"

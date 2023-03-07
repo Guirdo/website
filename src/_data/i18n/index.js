@@ -1,13 +1,17 @@
-const themes = require('./themes.json')
-const hero = require('./hero.json')
-const social = require('./social.json')
-const project = require('./project.json')
+const archive = require('./archive.json')
+const article = require('./article.json')
 const common = require('./common.json')
+const hero = require('./hero.json')
+const project = require('./project.json')
+const social = require('./social.json')
+const themes = require('./themes.json')
 
 module.exports = {
-  themes,
+  archive,
+  article,
+  common,
   hero,
-  social,
   project,
-  common
+  social,
+  themes
 }
