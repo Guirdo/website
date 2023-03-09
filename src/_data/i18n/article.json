@@ -2,5 +2,9 @@
   "publishedOn": {
     "es":"Publicado el: ",
     "en":"Published on: "
+  },
+  "thanks": {
+    "es":"Gracias por haber leído hasta el final. Si tienes alguna duda o sugerencia, contáctame por medio de mis redes sociales que podrás encontrar más abajo.",
+    "en":"Thank you for having read until the end. If you have any doubt or suggestion, contact me through my social networks which you can find below."
   }
 }

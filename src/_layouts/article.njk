@@ -29,8 +29,8 @@ layout: "base.njk"
     {{ content | safe }}
   </main>
   <hr>
-  <footer>
-    {% block references %}{% endblock %}
+  <footer class="[ flex-column ] [ fs-xs gap-xxs ]">
+    <p class="fs-xxs">{{ 'article.thanks' | i18n }}
 
     <p class="fs-xxs">
       {{ 'common.encourageContribution1' | i18n }}
