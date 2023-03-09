@@ -49,14 +49,12 @@ module.exports = function (eleventyConfig) {
 
   return {
     dir: {
-      markdownTemplateEngine: 'njk',
-      htmlTemplateEngine: 'njk',
-      dataTemplateEngine: 'njk',
-
       input: 'src',
       output: '_site',
       includes: '_includes',
       layouts: '_layouts'
-    }
+    },
+    markdownTemplateEngine: 'njk',
+    htmlTemplateEngine: 'njk',
   }
 };
