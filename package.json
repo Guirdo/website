@@ -12,6 +12,7 @@
   "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
     "autoprefixer": "^10.4.13",
     "cssnano": "^5.1.15",
     "eleventy-plugin-i18n": "^0.1.3",

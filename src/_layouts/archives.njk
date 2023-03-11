@@ -14,7 +14,7 @@
 
     {% elif currentType === 'articles' %}
     <p>{{ 'archive.articles' | i18n }}</p>
-    {{ archiveGrid(type = currentType,collection = collections['articles_'+page.lang]) }}
+    {{ archiveGrid(type = currentType,collection = collections.articles_es) }}
 
     {% endif %}
     

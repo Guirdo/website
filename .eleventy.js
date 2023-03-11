@@ -1,6 +1,7 @@
 const glob = require('fast-glob')
 const {EleventyI18nPlugin} = require('@11ty/eleventy');
 const i18n = require('eleventy-plugin-i18n')
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const translations = require('./src/_data/i18n')
 
 module.exports = function (eleventyConfig) {
@@ -37,6 +38,8 @@ module.exports = function (eleventyConfig) {
     }
   });
 
+  eleventyConfig.addPlugin(syntaxHighlight);
+
   eleventyConfig.addWatchTarget('./src/assets');
   
   eleventyConfig.addPassthroughCopy('src/assets/fonts/')
@@ -46,14 +49,12 @@ module.exports = function (eleventyConfig) {
 
   return {
     dir: {
-      markdownTemplateEngine: 'njk',
-      htmlTemplateEngine: 'njk',
-      dataTemplateEngine: 'njk',
-
       input: 'src',
       output: '_site',
       includes: '_includes',
       layouts: '_layouts'
-    }
+    },
+    markdownTemplateEngine: 'njk',
+    htmlTemplateEngine: 'njk',
   }
 };

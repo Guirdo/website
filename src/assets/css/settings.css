@@ -41,14 +41,3 @@
   --white-100: hsl(201 35% 92% / 50%);
   --dark:	hsl(205, 100%,5%);
 }
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --primary: hsl(22 34% 48%);
-    --secondary: 	hsl(214, 49%, 71%);
-    --secondary-light-1:	hsl(194, 100%, 97%);
-    --white: 	hsl(201, 35%, 92%);
-    --white-100: hsl(201 35% 92% / 50%);
-    --dark:	hsl(205, 100%,5%);
-  }
-}
