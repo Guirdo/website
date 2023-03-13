@@ -1,0 +1,40 @@
+---js
+{
+  layout: false,
+  permalink: "/es/articles/feed.xml",
+  eleventyExcludeFromCollections: true,
+  metadata: {
+    title: "Artículos de Seb Méndez",
+    subtitle: "La mejor forma para aprender es enseñando. Aquí encontrarás tutoriales y reflexiones sobre lo que voy aprendiendo para seguir aportando al conocimiento de la web.",
+    language: "es",
+    url: "https://guirdo.xyz/es/articles/",
+    author: {
+      name: "Sebastián Méndez",
+      email: "aldo.seb.mendez@gmail.com"
+    }
+  }
+}
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ metadata.url }}">
+  <title>{{ metadata.title }}</title>
+  <subtitle>{{ metadata.subtitle }}</subtitle>
+  <link href="{{ permalink | absoluteUrl(metadata.url) }}" rel="self"/>
+  <link href="{{ metadata.url }}"/>
+  <updated>{{ collections.articles_es | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <id>{{ metadata.url }}</id>
+  <author>
+    <name>{{ metadata.author.name }}</name>
+    <email>{{ metadata.author.email }}</email>
+  </author>
+  {%- for post in collections.articles_es | reverse %}
+  {%- set absolutePostUrl = post.url | absoluteUrl(metadata.url) %}
+  <entry>
+    <title>{{ post.data.title }}</title>
+    <link href="{{ absolutePostUrl }}"/>
+    <updated>{{ post.date | dateToRfc3339 }}</updated>
+    <id>{{ absolutePostUrl }}</id>
+    <content xml:lang="{{ metadata.language }}" type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+  </entry>
+  {%- endfor %}
+</feed>
