@@ -1,25 +1,31 @@
-<footer class="[ flex-row ] [ flex-wrap gap-md bg-primary text-white padding-xlg justify-content-evenly ]">
-  <p class="text-align-center">
-    {{ 'common.madeWith' | i18n({ name: 'Seb Méndez' }) }} | 2022 - 2023
-  </p>
+<footer class="[ flex-column ] [ gap-sm bg-primary text-white padding-xlg align-items-center ]">
+  <div class="[ flex-row ] [ flex-wrap gap-xxs justify-content-evenly w-100 ]">
+    <p class="text-align-center">
+      {{ 'common.madeWith' | i18n({ name: 'Seb Méndez' }) }} | 2022 - 2023
+    </p>
+  
+    <nav>
+      <ul class="[ flex-row ] [ gap-sm list-style-none ]">
+        {% for item in social %}
+        <li>
+          <a
+            class="text-inherit"
+            href="{{ item.url | url }}"
+            aria-label="{{ 'social.aria' | i18n({ social: item.name }) }}"
+            target="_blank"
+            rel="me"
+          >
+            <span>
+              {% include 'icons/'+item.name+".svg" %}
+            </span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
 
-  <nav>
-    <ul class="[ flex-row ] [ gap-sm list-style-none ]">
-      {% for item in social %}
-      <li>
-        <a
-          class="text-inherit"
-          href="{{ item.url | url }}"
-          aria-label="{{ 'social.aria' | i18n({ social: item.name }) }}"
-          target="_blank"
-          rel="me"
-        >
-          <span>
-            {% include 'icons/'+item.name+".svg" %}
-          </span>
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
-  </nav>
+  <a class="fs-xxs text-inherit" href="/es/articles/feed.xml">
+    {{ 'common.rssFeed' | i18n }}
+  </a>
 </footer>

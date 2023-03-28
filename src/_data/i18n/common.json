@@ -42,5 +42,9 @@
   "encourageContribution2": {
     "es":"No dudes en hacer un Pull Request",
     "en":"Feel free to do a Pull Request"
+  },
+  "rssFeed":{
+    "es":"RSS feed de mis artículos",
+    "en":"My articles RSS feed"
   }
 }
