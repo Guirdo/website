@@ -42,5 +42,26 @@ layout: "base.njk"
         {{ 'common.encourageContribution2' | i18n }}
       </a>
     </p>
+
+    <div class="flex-row">
+
+      {% set previousPost = collections.articles_es | getPreviousCollectionItem %}
+      {% set nextPost = collections.articles_es | getNextCollectionItem %}
+
+      <div class="flex-column">
+        {% if previousPost %}
+        <p class="fs-md">{{ 'article.previousArticle' | i18n }}</p>
+        <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+        {% endif %}
+      </div>
+      
+      <div class="flex-column">
+        {% if nextPost %}
+        <p class="fs-md">{{ 'article.nextArticle' | i18n }}</p>
+        <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
+        {% endif %}
+      </div>
+
+    </div>
   </footer>
 </article>
