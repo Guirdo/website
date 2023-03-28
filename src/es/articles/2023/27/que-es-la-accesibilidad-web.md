@@ -11,7 +11,7 @@ Qué tal si hablamos de una persona que tiene parálisis en la mayor parte de su
 
 **No todos utilizamos la web de la misma manera.** Hay personas que nacen con capacidades distintas a la nuestras, incluso con la edad podemos ir perdiéndolas. Mejorar y siempre tener en cuenta la accesibilidad de nuestras páginas es importante para asegurar que todos puedan acceder a la información que hay en ellas.
 
-![Mujer en silla de ruedas trabajando en su escritorio frente una computadora y respondiendo al telefono](https://res.cloudinary.com/dyuo7wfyi/image/upload/v1679888295/website/articles/que-es-la-accesibilidad-web_w4r1db.webp)
+![Mujer en silla de ruedas trabajando en su escritorio frente una computadora y respondiendo al teléfono](https://res.cloudinary.com/dyuo7wfyi/image/upload/v1679888295/website/articles/que-es-la-accesibilidad-web_w4r1db.webp)
 
 ## ¿Qué es la accesibilidad web?
 
