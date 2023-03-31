@@ -85,3 +85,6 @@ Por una internet más accesible, sigue construyendo la web 🌐.
 * [Constructing a POUR Website](https://webaim.org/articles/pour/)
 * [Modelos médicos y sociales de discapacidad](https://odpc.ucsf.edu/node/1906)
 * [Disability Theory: Medical/Rehabilitative Model](https://guides.library.illinois.edu/c.php?g=549817&p=3774564)
+
+### Fuentes multimedia
+* [Imagen de DCStudio en Freepik](https://www.freepik.es/foto-gratis/mujer-discapacitada-ocupada-hablando-telefono-socio-comercial_15853840.htm#page=2&query=people%20with%20disabilities&position=13&from_view=search&track=ais)
