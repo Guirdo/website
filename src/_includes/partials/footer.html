@@ -25,7 +25,18 @@
     </nav>
   </div>
 
-  <a class="fs-xxs text-inherit" href="/es/articles/feed.xml">
-    {{ 'common.rssFeed' | i18n }}
-  </a>
+  <nav class="fs-xxs">
+    <ul class="[ flex-column ] [ align-items-center gap-sm list-style-none ]">
+      <li>
+        <a class="text-inherit" href="/es/articles/feed.xml">
+          {{ 'common.rssFeed' | i18n }}
+        </a>
+      </li>
+      <li>
+        <a class="text-inherit" href="{{ '/credits' | locale_url }}">
+          {{ 'common.credits' | i18n }}
+        </a>
+      </li>
+    </ul>
+  </nav>
 </footer>
