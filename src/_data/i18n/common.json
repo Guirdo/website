@@ -43,6 +43,10 @@
     "es":"No dudes en hacer un Pull Request",
     "en":"Feel free to do a Pull Request"
   },
+  "donate": {
+    "es": "Invítame un café☕",
+    "en": "Buy me a coffee☕"
+  },
   "rssFeed":{
     "es":"RSS feed de mis artículos",
     "en":"My articles RSS feed"
