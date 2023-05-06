@@ -11,13 +11,13 @@ description: Soy un desarrollador front-end que busca una oportunidad para unirm
     <h2>Sobre mí</h2>
 
     <p>
-      Mi nombre es Seb Méndez, tambien conocido como guirdo. Soy un desarrollador front-end originario de México. He terminado una carrera en ingeniería en sistemas computacionales y estoy buscando unirme a un gran equipo que esta trabajando páginas y apps web geniales. 
+      Mi nombre es Seb Méndez, también conocido como Guirdo. Soy un desarrollador front-end originario de México. He terminado una carrera en ingeniería en sistemas computacionales y estoy buscando unirme a un gran equipo que esta trabajando páginas y apps web geniales. 
     </p>
     <p>
       Desde el 2019, he estado desarrollando páginas web con las cuales he encontrado una forma de expresarme y ayudar a otros a hacer sus ideas realidad (Mira mi trabajo más abajo).
     </p>
     <p>
-      Me enfoco en los clásicos HTML, CSS y JavaScript (el segundo es mi favorito), además de que he estado construyendo páginas web con ReactJS y NextJS.
+      Me enfoco en los clásicos HTML, CSS y JavaScript (el segundo es mi favorito), además de que he estado construyendo páginas web con ReactJS y SolidJS.
     </p>
   </div>
 </section>
@@ -42,7 +42,7 @@ description: Soy un desarrollador front-end que busca una oportunidad para unirm
 
 <section id="contact">
   <div class="[ container inner-container ] [ flex-column ] [ gap-md ]">
-    <h2 class="[ contact-section__title ] [ text-align-start fs-xlg ] ">¡Contáctame!</h2>
+    <h2 class="[ contact-section__title ] [ text-align-start ] ">¡Contáctame!</h2>
 
     <p>
       Sería genial si me mandaras un mensaje o cualquier duda que tengas sobre mi trabajo o cualquier otra cosa. También puedes contactarme por mis redes sociales.
@@ -59,7 +59,7 @@ description: Soy un desarrollador front-end que busca una oportunidad para unirm
         {% set icon = "icons/"+item.name+".svg" %}
         {% set name = 'social.'+item.name %}
         {% include icon %}
-        <span class="fs-xs">{{ name | i18n }}</span>
+        <span class="fs-sm">{{ name | i18n }}</span>
       </a>
       {% endfor %}
     </div>
