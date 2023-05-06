@@ -4,7 +4,7 @@
 {% from "macros/archiveGrid.njk" import archiveGrid %}
 
 {% block content %}
-  <div class="[ container-lg inner-container ] [ flex-column ] [ gap-xs flex-grow padding-xs ]">
+  <div class="[ wrapper ] [ flex-column ] [ gap-xs flex-grow padding-xs ]">
     {% set translation = 'common.'+currentType %}
     <h1>{{ translation | i18n }}</h1>
 
