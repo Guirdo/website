@@ -1,6 +1,15 @@
 :root {
   /* Font */
   --font: 'Inconsolata', monospace;
+  --scale: 1.15;
+
+  --fs-md: clamp(1rem, 1rem + 0.5vi, 1.4rem);
+  --fs-sm: calc(var(--fs-md) / var(--scale) );
+  --fs-xs: calc(var(--fs-sm) / var(--scale) );
+  --fs-xxs: calc(var(--fs-xs) / var(--scale) );
+  --fs-lg: calc(var(--fs-md) * var(--scale) );
+  --fs-xlg: calc(var(--fs-lg) * var(--scale) );
+  --fs-xxlg: calc(var(--fs-xlg) * var(--scale) );
 
   /* Color */
   --mermaid: hsl(265 52% 10%);
@@ -16,7 +25,7 @@
   --shadow: hsl(0 0% 0% / 0.35);
 
   /* Spacing */
-  --s-xxs: 0.90rem;
+  --s-xxs: 0.5rem;
   --s-xs: 1rem;
   --s-sm: 1.25rem;
   --s-md: 1.5rem;

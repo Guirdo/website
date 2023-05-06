@@ -2,9 +2,9 @@
 layout: "base.njk"
 ---
 
-<article class="[ container inner-container ] [ flex-column ] [ gap-xs bg-white padding-sm padding-block-xs ]">
-  <header class="[ flex-column ] [ gap-xs ]">
-    <figure class="lg-w-75 w-100 align-self-center">
+<article class="[ wrapper content ] [ bg-white padding-sm padding-block-xs ]">
+  <header class="[ flex-column ] [ gap-xs grid-column-2 ]">
+    <figure class="w-100">
       <img
         class="border-primary"
         src="{{ featuredImage | url }}"
@@ -13,13 +13,13 @@ layout: "base.njk"
         height="auto"
       >
     </figure>
-    <div>
+    <div class="flex-column gap-xxs">
       <h1>{{ title }}</h1>
-      <p>
-        <em class="fs-xs">{{ description }}</em>
+      <p class="fs-sm">
+        <em>{{ description }}</em>
       </p>
-      <p>
-        <small class="fs-xs">
+      <p class="fs-sm">
+        <small>
           <b>Stack:
           </b>
           {{ stack | joiner(', ') }}
@@ -55,21 +55,18 @@ layout: "base.njk"
       </p>
       <p class="fs-xxs">
         <span>{% include "icons/small/tag.svg" %}</span>
-        {# {{ tags | turnAnchorTag | joiner(', ') | safe }} #}
-        {% for tag in tags %}
-          <a>{{ tag }}</a>
-        {% endfor %}
+        <span>{{ tags | joiner(', ') }}</span>
       </p>
     </div>
   </header>
-  <hr>
-  <main class="[ article ] [ flex-column ] [ fs-xs gap-xxs ]">
+  <hr class="grid-column-2">
+  <main class="[ article ] [ flex-column ] [ fs-sm gap-xxs grid-column-2 ]">
     {{ content | safe }}
   </main>
-  <hr>
-  <footer>
+  <hr class="grid-column-2">
+  <footer class="grid-column-2">
     {% block references %}{% endblock %}
-    <p class="fs-xxs">
+    <p class="fs-xs">
       {{ 'common.encourageContribution1' | i18n }}
       <a
         class="text-inherit"
@@ -80,4 +77,4 @@ layout: "base.njk"
       </a>
     </p>
   </footer>
-    </article>
+</article>
