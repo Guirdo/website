@@ -1,9 +1,9 @@
-.fs-xxs { font-size: var(--s-xxs) }
-.fs-xs { font-size: var(--s-xs) }
-.fs-sm { font-size: var(--s-sm) }
-.fs-md { font-size: var(--s-md) }
-.fs-lg { font-size: var(--s-lg) }
-.fs-xlg { font-size: var(--s-xlg) }
+.fs-xxs { font-size: var(--fs-xxs) }
+.fs-xs { font-size: var(--fs-xs) }
+.fs-sm { font-size: var(--fs-sm) }
+.fs-md { font-size: var(--fs-md) }
+.fs-lg { font-size: var(--fs-lg) }
+.fs-xlg { font-size: var(--fs-xlg) }
 
 .fw-bold { font-weight: bold }
 
@@ -19,5 +19,5 @@
 .text-decoration-none { text-decoration: none }
 
 @media screen and (min-width: 64rem) {
-  .lg-fs-sm { font-size: var(--s-sm) }
+  .lg-fs-sm { font-size: var(--fs-sm) }
 }
