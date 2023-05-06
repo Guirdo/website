@@ -1,7 +1,7 @@
 ---
 title: Qué es la accesibilidad web
 description: Crear páginas web accesibles es crear páginas de calidad
-tags: [a11ty]
+tags: [a11y]
 date: 2023-03-27 18:00:00 -06:00
 featuredImage: https://res.cloudinary.com/dyuo7wfyi/image/upload/v1679888295/website/articles/que-es-la-accesibilidad-web_w4r1db.webp
 ---
