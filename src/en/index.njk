@@ -1,7 +1,7 @@
 ---
 layout: home.njk
 title: Seb Méndez | Front-end developer
-description: I'm a front-end developer and I'm looking for an oportunity to join a great team
+description: I'm a front-end developer and I'm looking for an opportunity to join a great team
 ---
 
 {% from "macros/archiveGrid.njk" import archiveGrid %}
@@ -11,13 +11,13 @@ description: I'm a front-end developer and I'm looking for an oportunity to join
     <h2>About me</h2>
 
     <p>
-      I'm Seb Méndez, also known as guirdo. I'm front-end developer from Mexico, I finished a computational system engineering degree and I'm looking for joining a great team who's working in great web app and pages.
+      I'm Seb Méndez, also known as Guirdo. I'm front-end developer from Mexico, I finished a computational system engineering degree and I'm looking for joining a great team who's working in great web app and pages.
     </p>
     <p>
       Since 2019, I've been developing web sites which I found a way to express myself and to help others bring their ideas to life (Take a look at my work below).
     </p>
     <p>
-      I'm focused on the old classic HTML, CSS and JavaScript, (the second one is my fav), additioanally I've been building web sites with ReactJS and NextJS.
+      I'm focused on the old classic HTML, CSS and JavaScript, (the second one is my fav), additionally I've been building web sites with ReactJS and SolidJS.
     </p>
   </div>
 </section>
@@ -59,7 +59,7 @@ description: I'm a front-end developer and I'm looking for an oportunity to join
         {% set icon = "icons/"+item.name+".svg" %}
         {% set name = 'social.'+item.name %}
         {% include icon %}
-        <span class="fs-xs">{{ name | i18n }}</span>
+        <span class="fs-sm">{{ name | i18n }}</span>
       </a>
       {% endfor %}
     </div>
