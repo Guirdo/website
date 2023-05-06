@@ -4,10 +4,10 @@ layout: "base.njk"
 
 <article class="[ wrapper content ] [ bg-white padding-sm padding-block-xs ]">
   <header class="[ flex-column ] [ gap-xs grid-column-2 ]">
-    <div>
+    <div class="flex-column gap-xxs">
       <h1>{{ title }}</h1>
-      <p>
-        <em class="fs-xs">{{ description }}</em>
+      <p class="fs-sm">
+        <em>{{ description }}</em>
       </p>
     </div>
     <div class="flex-row flex-wrap gap-xs">
@@ -17,22 +17,19 @@ layout: "base.njk"
       </p>
       <p class="fs-xxs">
         <span>{% include "icons/small/tag.svg" %} </span>
-        {# {{ tags | turnAnchorTag | joiner(', ') | safe }} #}
-        {% for tag in tags %}
-          <a>{{ tag }}</a>
-        {% endfor %}
+        <span>{{ tags | joiner(', ') }}</span>
       </p>
     </div>
   </header>
   <hr class="grid-column-2">
-  <main class="[ article ] [ flex-column ] [ grid-column-2 fs-xs gap-xxs ]">
+  <main class="[ article ] [ flex-column ] [ grid-column-2 fs-sm gap-xxs ]">
     {{ content | safe }}
   </main>
   <hr class="grid-column-2 mb-lg">
-  <footer class="[ flex-column ] [ fs-xxs gap-xxs grid-column-2 ]">
-    <p>{{ 'article.thanks' | i18n }}
+  <footer class="[ flex-column ] [ gap-xxs grid-column-2 ]">
+    <p class="fs-xs">{{ 'article.thanks' | i18n }}
 
-    <p>
+    <p class="fs-xs">
       {{ 'common.encourageContribution1' | i18n }}
       <a
         class="text-inherit"
@@ -50,14 +47,14 @@ layout: "base.njk"
 
       <div class="flex-column">
         {% if previousPost %}
-        <p class="fs-md">{{ 'article.previousArticle' | i18n }}</p>
+        <p>{{ 'article.previousArticle' | i18n }}</p>
         <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
         {% endif %}
       </div>
       
       <div class="flex-column">
         {% if nextPost %}
-        <p class="fs-md">{{ 'article.nextArticle' | i18n }}</p>
+        <p>{{ 'article.nextArticle' | i18n }}</p>
         <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
         {% endif %}
       </div>
