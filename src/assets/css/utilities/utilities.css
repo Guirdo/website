@@ -12,6 +12,8 @@
 
 .aspect-ratio-1 { aspect-ratio: 1 }
 .aspect-ratio-4-3 { aspect-ratio: 4 / 3 }
+.aspect-ratio-16-9 { aspect-ratio: 16 / 9 }
+.object-fit-cover { object-fit: cover }
 
 .bg-primary { background-color: var(--primary) }
 .bg-secondary { background-color: var(--secondary) }
