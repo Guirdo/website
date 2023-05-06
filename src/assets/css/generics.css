@@ -11,7 +11,7 @@
 
 html, body {
   font-family: var(--font);
-  font-size: var(--s-sm);
+  font-size: var(--fs-md);
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -56,11 +56,15 @@ select {
 h1,h1,h3 { line-height: 1.1; }
 
 h1 {
-  font-size: var(--s-xlg);
+  font-size: var(--fs-xxlg);
 }
 
 h2 {
-  font-size: var(--s-lg);
+  font-size: var(--fs-xlg);
+}
+
+h3 {
+  font-size: var(--fs-lg);
 }
 
 section { width: 100% }
