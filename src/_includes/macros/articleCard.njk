@@ -10,6 +10,7 @@
   <article class="[ flex-column ] [ bg-white text-dark border-primary h-100 ]">
     <figure class="border-bottom-primary">
       <img
+        class="aspect-ratio-16-9 object-fit-cover"
         src="{{ featuredImage | url }}"
         alt="{{ featuredImageAlt }}"
         width="100%"
@@ -24,10 +25,10 @@
         </a>
       </h3>
       <ul class="[ flex-row ] [ text-dark gap-xxs list-style-none ]">
-        <li class="fs-xxs">
+        <li class="fs-xs">
           <time date="{{ date }}">{{ date | formatDateYYYYMMDD }}</time>
         </li>
-        <li class="fs-xxs">
+        <li class="fs-xs">
           <span>{% include "icons/small/tag.svg" %}</span>
           {# {{ tags | turnAnchorTag | joiner(', ') | safe }} #}
           {% for tag in tags %}
@@ -35,7 +36,7 @@
           {% endfor %}
         </li>
       </ul>
-      <p class="fs-xs">{{ description }}</p>
+      <p class="fs-sm">{{ description }}</p>
     </div>
   </article>
 {% endmacro %}
