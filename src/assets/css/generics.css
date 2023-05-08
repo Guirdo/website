@@ -81,8 +81,7 @@ textarea {
 code {
   background-color: var(--secondary-light-1);
   font-family: 'Courier New', Courier, monospace;
-  font-size: var(--fs-xxs);
-  padding-inline: calc(var(--fs-xxs)/2);
+  font-size: var(--fs-xs);
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
