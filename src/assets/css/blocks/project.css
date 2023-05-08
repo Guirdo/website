@@ -6,3 +6,7 @@
   -webkit-mask: var(--mask);
   mask: var(--mask);
 }
+
+.project :where(h1:is(:first-of-type)) {
+  margin-block-start: calc(var(--stack) * 1.5);
+}
