@@ -2,8 +2,8 @@
 layout: "base.njk"
 ---
 
-<article class="[ wrapper content ] [ bg-white padding-sm padding-block-xs ]">
-  <header class="[ flex-column ] [ gap-xs grid-column-2 ]">
+<article class="[ article project ] [ wrapper content ] [ bg-white padding-sm padding-block-xs ]">
+  <header class="[ grid-column-2 ]">
     <figure class="w-100">
       <img
         class="border-primary"
@@ -13,54 +13,50 @@ layout: "base.njk"
         height="auto"
       >
     </figure>
-    <div class="flex-column gap-xxs">
+    <div>
       <h1>{{ title }}</h1>
-      <p class="fs-sm">
+      <p>
         <em>{{ description }}</em>
       </p>
-      <p class="fs-sm">
-        <small>
-          <b>Stack:
-          </b>
-          {{ stack | joiner(', ') }}
-        </small>
+      <p>
+        <b>Stack:</b> {{ stack | joiner(', ') }}
       </p>
-      <div class="flex-row gap-xs flex-wrap">
+      <p>
         {% if repoUrl %}
           <a
-            class="fs-xs text-inherit align-items-center" 
-            href="{{ repoUrl | url }}" 
-            target="_blank"
-            aria-label="{{ 'project.checkCodeAria' | i18n({ project: title }) }}"
-          >
-            {% include "icons/small/github.svg" %} {{ 'project.checkCode' | i18n }}
-          </a>
+              class="text-inherit align-items-center" 
+              href="{{ repoUrl | url }}" 
+              target="_blank"
+              aria-label="{{ 'project.checkCodeAria' | i18n({ project: title }) }}"
+            >
+              {% include "icons/small/github.svg" %} {{ 'project.checkCode' | i18n }}
+            </a>
         {% endif %}
         {% if demoUrl %}
           <a
-            class="fs-xs text-inherit" 
-            href="{{ demoUrl | url }}" 
-            target="_blank"
-            aria-label="{{ 'project.onlineDemoAria' | i18n({ project: title }) }}"
-          >
-            {% include "icons/small/internet.svg" %} {{ 'project.onlineDemo' | i18n }}
-          </a>
+              class="text-inherit" 
+              href="{{ demoUrl | url }}" 
+              target="_blank"
+              aria-label="{{ 'project.onlineDemoAria' | i18n({ project: title }) }}"
+            >
+              {% include "icons/small/internet.svg" %} {{ 'project.onlineDemo' | i18n }}
+            </a>
         {% endif %}
-      </div>
+      </p>
     </div>
-    <div class="flex-row flex-wrap gap-xs">
-      <p class="fs-xxs">
+    <div>
+      <p>
         {{ 'project.createdOn' | i18n }}
         <time date="{{ date }}">{{ date | formatDateYYYYMMDD }}</time>
       </p>
-      <p class="fs-xxs">
+      <p>
         <span>{% include "icons/small/tag.svg" %}</span>
         <span>{{ tags | joiner(', ') }}</span>
       </p>
     </div>
   </header>
   <hr class="grid-column-2">
-  <main class="[ article ] [ flex-column ] [ fs-sm gap-xxs grid-column-2 ]">
+  <main class="[ grid-column-2 fs-sm ]">
     {{ content | safe }}
   </main>
   <hr class="grid-column-2">

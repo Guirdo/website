@@ -2,31 +2,31 @@
 layout: "base.njk"
 ---
 
-<article class="[ wrapper content ] [ bg-white padding-sm padding-block-xs ]">
-  <header class="[ flex-column ] [ gap-xs grid-column-2 ]">
-    <div class="flex-column gap-xxs">
+<article class="[ article ] [ wrapper content ] [ bg-white padding-sm padding-block-xs ]">
+  <header class=" [ grid-column-2 ]">
+    <div>
       <h1>{{ title }}</h1>
-      <p class="fs-sm">
+      <p>
         <em>{{ description }}</em>
       </p>
     </div>
-    <div class="flex-row flex-wrap gap-xs">
-      <p class="fs-xxs">
+    <div class="">
+      <p>
         {{ 'article.publishedOn' | i18n }}
         <time date="{{ date }}">{{ date | formatDateYYYYMMDD }}</time>
       </p>
-      <p class="fs-xxs">
+      <p>
         <span>{% include "icons/small/tag.svg" %} </span>
         <span>{{ tags | joiner(', ') }}</span>
       </p>
     </div>
   </header>
   <hr class="grid-column-2">
-  <main class="[ article ] [ flex-column ] [ grid-column-2 fs-sm gap-xxs ]">
+  <main class="[ grid-column-2 fs-sm ]">
     {{ content | safe }}
   </main>
   <hr class="grid-column-2 mb-lg">
-  <footer class="[ flex-column ] [ gap-xxs grid-column-2 ]">
+  <footer class="grid-column-2 ]">
     <p class="fs-xs">{{ 'article.thanks' | i18n }}
 
     <p class="fs-xs">
@@ -40,25 +40,27 @@ layout: "base.njk"
       </a>
     </p>
 
-    <div class="flex-row">
+    <div class="flex-row flex-wrap">
+      {# 
+        Due to the collection is reversed from origin,
+        the variables names doesn't correspond to the filters ones
+       #}
+      {% set nextPost = collections.articles_es | getPreviousCollectionItem %}
+      {% set prevPost = collections.articles_es | getNextCollectionItem %}
 
-      {% set previousPost = collections.articles_es | getPreviousCollectionItem %}
-      {% set nextPost = collections.articles_es | getNextCollectionItem %}
-
-      <div class="flex-column">
-        {% if previousPost %}
+      <div class="flex-grow">
+        {% if prevPost %}
         <p>{{ 'article.previousArticle' | i18n }}</p>
-        <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+        <a href="{{ prevPost.url }}">{{ prevPost.data.title }}</a>
         {% endif %}
       </div>
-      
-      <div class="flex-column">
+
+      <div class="flex-grow">
         {% if nextPost %}
         <p>{{ 'article.nextArticle' | i18n }}</p>
         <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
         {% endif %}
       </div>
-
     </div>
   </footer>
 </article>
