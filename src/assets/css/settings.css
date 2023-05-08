@@ -2,8 +2,9 @@
   /* Font */
   --font: 'Inconsolata', monospace;
   --scale: 1.15;
+  --stack: clamp(1.25ex, 2.5vmax, 1.75ex);  
 
-  --fs-md: clamp(1rem, 1rem + 0.5vi, 1.4rem);
+  --fs-md: clamp(1rem, 1rem + 0.5vi, 1.5rem);
   --fs-sm: calc(var(--fs-md) / var(--scale) );
   --fs-xs: calc(var(--fs-sm) / var(--scale) );
   --fs-xxs: calc(var(--fs-xs) / var(--scale) );
