@@ -7,6 +7,18 @@
   mask: var(--mask);
 }
 
+.project :where(header, main, footer) {
+  padding-block: 5vmax;
+}
+
 .project :where(h1:is(:first-of-type)) {
   margin-block-start: calc(var(--stack) * 1.5);
+}
+
+.project :where(h1,h2,h3) {
+  margin-block-start: calc(var(--stack) * 1.5);
+}
+
+.project :where(ul,ol)  {
+  margin-inline-start: var(--s-lg);
 }

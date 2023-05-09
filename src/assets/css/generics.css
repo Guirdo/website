@@ -99,3 +99,19 @@ code {
     scroll-behavior: auto !important;
   }
 }
+
+:where(h1,h2,h3) {
+  margin-block-start: calc(var(--stack) * 1.5);
+}
+
+:where(h1, h2, h3) + *:not(h1, h2, h3,div) {
+  margin-block-start: calc(var(--stack) / 1.5);
+}
+
+:where(p) {
+  margin-block-start: calc(var(--stack) / 1.5);
+}
+
+:where(h1,h2,h3:is(:first-of-type)) {
+  margin-block-start: 0;
+}
