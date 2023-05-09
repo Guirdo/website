@@ -6,16 +6,20 @@
 {% block content %}
   <div class="[ wrapper ] [ flex-column ] [ gap-xs flex-grow padding-xs ]">
     {% set translation = 'common.'+currentType %}
-    <h1>{{ translation | i18n }}</h1>
+    <div class="fs-sm">
+      <h1>{{ translation | i18n }}</h1>
+
+      {% if currentType === 'projects' %}
+      <p>{{ 'archive.projects' | i18n }}</p>
+      {% elif currentType === 'articles' %}
+      <p>{{ 'archive.articles' | i18n }}</p>
+      {% endif %}
+    </div>
 
     {% if currentType === 'projects' %}
-    <p>{{ 'archive.projects' | i18n }}</p>
     {{ archiveGrid(type = currentType,collection = collections['projects_'+page.lang]) }}
-
     {% elif currentType === 'articles' %}
-    <p>{{ 'archive.articles' | i18n }}</p>
     {{ archiveGrid(type = currentType,collection = collections.articles_es) }}
-
     {% endif %}
     
   </div>

@@ -2,6 +2,6 @@
 .container-lg {width: min(100%, 64rem);}
 .inner-container {
   max-width: 64rem;
-  padding-block: calc(var(--s-xlg) * 1.5);
+  padding-block: 5vmax;
   margin-inline: auto;
 }

@@ -7,7 +7,7 @@ description: Soy un desarrollador front-end que busca una oportunidad para unirm
 {% from "macros/archiveGrid.njk" import archiveGrid %}
 
 <section id="about-me" class="bg-secondary">
-  <div class="[ container inner-container ] [ flex-column ] [ gap-md ]">
+  <div class="[ container inner-container ] [ fs-sm ]">
     <h2>Sobre mí</h2>
 
     <p>
@@ -42,11 +42,13 @@ description: Soy un desarrollador front-end que busca una oportunidad para unirm
 
 <section id="contact">
   <div class="[ container inner-container ] [ flex-column ] [ gap-md ]">
-    <h2 class="[ contact-section__title ] [ text-align-start ] ">¡Contáctame!</h2>
+    <div>
+      <h2 class="[ contact-section__title ] [ text-align-start ] ">¡Contáctame!</h2>
 
-    <p>
-      Sería genial si me mandaras un mensaje o cualquier duda que tengas sobre mi trabajo o cualquier otra cosa. También puedes contactarme por mis redes sociales.
-    </p>
+      <p class="[ fs-sm ]">
+        Sería genial si me mandaras un mensaje o cualquier duda que tengas sobre mi trabajo o cualquier otra cosa. También puedes contactarme por mis redes sociales.
+      </p>
+    </div>
 
     <div class="[ contact-socials ] [ gap-xs ]">
       {% for item in social %}

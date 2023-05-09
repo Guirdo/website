@@ -17,12 +17,15 @@
       >
     </figure>
     <div class="[ flex-column ] [ padding-xs gap-xs flex-grow ]">
-      <h3 class="project-card__title">
+      <div class="flex-grow">
+        <h3 class="project-card__title">
         <a class="text-inherit" href="{{ url | url }}" aria-label="Learn more about {{ title }}">
           {{ title }}
         </a>
       </h3>
-      <p class="[ flex-grow ] [ fs-sm ]">{{ description }}</p>
+      <p class="fs-sm">{{ description }}</p>
+      </div>
+
       <p class="fs-xs">
         <strong>Stack: </strong> {{ stack | joiner(', ') }}
       </p>
