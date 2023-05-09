@@ -6,6 +6,10 @@
   margin-block-start: calc(var(--stack) * 1.5);
 }
 
+.article :where(h1:is(:first-of-type)) {
+  margin-block-start: 0;
+}
+
 .article :where(ul,ol)  {
   margin-inline-start: var(--s-lg);
 }
