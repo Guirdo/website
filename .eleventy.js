@@ -3,6 +3,7 @@ const {EleventyI18nPlugin} = require('@11ty/eleventy');
 const i18n = require('eleventy-plugin-i18n')
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const pluginWebc = require("@11ty/eleventy-plugin-webc");
 const translations = require('./src/_data/i18n')
 
 module.exports = function (eleventyConfig) {
@@ -41,6 +42,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addPlugin(pluginWebc);
 
   eleventyConfig.addWatchTarget('./src/assets');
   
