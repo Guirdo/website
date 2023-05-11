@@ -1,0 +1,25 @@
+<header class="[ hero ] [ flex-column-reverse align-items-end] [ h-100vh ]">
+  <div class="[ hero-presentation ] [ box-shadow-blur bg-primary align-self-end ]">
+      <div class="[ hero-welcome ] [ padding-xs text-white ]">
+        <h1 class="hero__title">
+          <span @text="i18n('hero.greeting1')"></span> <br> 
+          <span @text="i18n('hero.greeting2')"></span> <br>
+          <span @text="i18n('hero.greeting3')"></span>
+        </h1>
+        <p @text="i18n('hero.presentation')"></p>
+      </div>
+      <a href="#about-me" class="[ hero-scroll-down ] [ flex-row ] [ text-inherit align-items-center padding-block-xs bg-secondary justify-content-evenly ]">
+        <template webc:type="11ty" 11ty:type="njk">
+          {% include "icons/scroll-down.svg" %}
+        </template>
+        <span class="fs-sm" @text="i18n('hero.see-more')"></span>
+      </a>
+
+      <a href="#contact" class="[ hero-contact ] [ flex-row ] [ text-inherit align-items-center bg-white justify-content-evenly ]">
+        <template webc:type="11ty" 11ty:type="njk">
+          {% include "icons/email.svg" %}
+        </template>
+        <span class="fs-sm" @text="i18n('hero.contact')"></span>
+      </a>
+  </div>
+</header>
