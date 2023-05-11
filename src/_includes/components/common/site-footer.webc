@@ -1,0 +1,40 @@
+<footer class="[ flex-column ] [ gap-sm bg-primary text-white padding-xlg align-items-center ]">
+  <div class="[ flex-row ] [ flex-wrap gap-xxs justify-content-evenly w-100 ]">
+    <span
+      class="text-align-center"
+      @text="`${ i18n('common.madeWith',{ name: 'Seb Méndez' })} | 2022 - 2023`"
+    >
+    </span>
+  
+    <social-icons></social-icons>
+  </div>
+
+  <nav class="fs-sm">
+    <ul class="[ flex-row ] [ flex-wrap justify-content-center gap-sm list-style-none ]">
+      <li>
+        <a
+          class="text-inherit" 
+          href="https://ko-fi.com/guirdo"
+          @text="i18n('common.donate')"
+        >
+        </a>
+      </li>
+      <li>
+        <a
+          class="text-inherit"
+          href="/es/articles/feed.xml"
+          @text="i18n('common.rssFeed')"
+        >
+        </a>
+      </li>
+      <li>
+        <a
+          class="text-inherit"
+          :href="locale_url('/credits')"
+          @text="i18n('common.credits')"
+        >
+        </a>
+      </li>
+    </ul>
+  </nav>
+</footer>
