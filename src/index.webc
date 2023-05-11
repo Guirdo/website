@@ -1,5 +1,5 @@
 ---
-layout: naked.njk
+layout: naked.webc
 title: Seb Méndez | Desarrollador front-end
 description: Soy un desarrollador front-end que busca una oportunidad para unirme a un gran equipo
 ---
@@ -16,22 +16,4 @@ description: Soy un desarrollador front-end que busca una oportunidad para unirm
   <h2>Por favor, regresa a <a href="/es">casa</a></h2>
 </div>
 
-<nav>
-    <ul class="[ flex-row ] [ gap-sm list-style-none ]">
-      {% for item in social %}
-      <li>
-        <a
-          class="text-inherit"
-          href="{{ item.url | url }}"
-          aria-label="{{ item.name }}"
-          target="_blank"
-          rel="me"
-        >
-          <span>
-            {% include 'icons/'+item.name+".svg" %}
-          </span>
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
-  </nav>
+<social-icons @naked="true"></social-icons>
