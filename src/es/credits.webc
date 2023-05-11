@@ -1,9 +1,13 @@
 ---
-layout: base.njk
+layout: base.webc
 title: Créditos
 ---
 
-<div class="[ wrapper content ] [ fs-sm bg-white padding-sm padding-block-xs ]">
+<template webc:type="11ty" 11ty:type="njk">
+  {% include 'partials/navbar.njk' %}
+</template>
+
+<div class="[ wrapper content ] [ flex-grow-2 fs-sm bg-white padding-sm padding-block-xs ]">
   <div class="grid-column-2">
     <h1>Créditos</h1>
 
