@@ -1,0 +1,17 @@
+<nav>
+  <ul class="[ flex-row ] [ gap-sm list-style-none ]">
+    <li webc:for="item of $data.social">
+      <a
+        class="text-inherit"
+        :href="item.url"
+        :aria-label="naked ? item.name : i18n('social.aria',{ social: item.name })"
+        target="_blank"
+        rel="me"
+      >
+        <template webc:type="11ty" 11ty:type="njk">
+          {% include 'icons/'+item.name+".svg" %}
+        </template>
+      </a>
+    </li>
+  </ul>
+</nav>
