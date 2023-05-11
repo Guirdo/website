@@ -42,7 +42,9 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginRss);
-  eleventyConfig.addPlugin(pluginWebc);
+  eleventyConfig.addPlugin(pluginWebc, {
+		components: "src/_includes/components/**/*.webc",
+	});
 
   eleventyConfig.addWatchTarget('./src/assets');
   
