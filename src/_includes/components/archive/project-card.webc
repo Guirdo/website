@@ -1,0 +1,29 @@
+<article class="[ flex-column ] [ bg-white text-dark border-primary h-100 ]">
+  <figure class="border-bottom-primary">
+    <img
+      :src="featuredImage"
+      :alt="featuredImageAlt"
+      width="100%"
+      height="auto"
+      loading="lazy"
+    >
+  </figure>
+  <div class="[ flex-column ] [ padding-xs gap-xs flex-grow ]">
+    <div class="flex-grow">
+      <h3 >
+      <a
+        class="text-inherit"
+        :href="url"
+        :aria-label="i18n('project.learnMore', { project: title })"
+        @text="title"
+      >
+      </a>
+    </h3>
+    <p class="fs-sm" @text="description"></p>
+    </div>
+
+    <span class="fs-xs">
+      <strong>Stack: </strong> <span @text="joiner(stack,', ')"></span>
+    </span>
+  </div>
+</article>
