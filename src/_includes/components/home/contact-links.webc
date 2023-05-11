@@ -1,0 +1,14 @@
+<div class="[ contact-socials ] [ gap-xs ]">
+  <a
+    webc:for="item of $data.social"
+    class="[ flex-row ] [ bg-white gap-xs text-inherit align-items-center padding-xs ]"
+    :href="item.url" 
+    :aria-label="i18n('social.aria',{ social: item.name })"
+    target="_blank"
+  >
+    <template webc:type="11ty" 11ty:type="njk">
+      {% include 'icons/'+item.name+".svg" %}
+    </template>
+    <span class="fs-sm" @text="i18n(`social.${item.name}`)"></span>
+  </a>
+</div>
