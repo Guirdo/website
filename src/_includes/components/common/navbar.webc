@@ -1,0 +1,116 @@
+<nav class="[ navbar ] [ bg-primary padding-block-sm ]">
+  <div class="[ navbar-container ] [ flex-row ] [ gap-xs justify-content-between align-items-center mi-xlg mi-auto text-white ]">
+    <a
+      class="[ navbar__brand ] [ mi-end-auto text-decoration-none ]" 
+      :href="locale_url('/')"
+    >
+      Seb Méndez
+    </a>
+    <!-- Links -->
+    <div id="navbarLinks" class="[ navbar-links ] [ flex-column ] [ box-shadow-blur lg-box-shadow-none bg-primary gap-xs padding-xs lg-padding-0 lg-visible align-items-center ]">
+      <a
+        :href="`${locale_url('/')}#about-me`"
+        aria-label="About section"
+        @text="i18n('common.about')"
+      >
+      </a>
+      <a
+        :href="locale_url('/projects/')"
+        aria-label="Projects section"
+        @text="i18n('common.projects')"
+      >
+      </a>
+      <a
+        :href="locale_url('/articles/')"
+        aria-label="Projects section"
+        @text="i18n('common.articles')"
+      >
+      </a>
+      <a
+        :href="`${locale_url('/')}#contact`"
+        aria-label="Contact section"
+        @text="i18n('common.contact')"
+      >
+      </a>
+    </div>
+    <!-- Controls -->
+    <div class="[ navbar-controls ] [ flex-row ] [ gap-xs align-items-center ]">
+      <button
+        id="menuButton"
+        class="[ flex-row ] [ lg-display-none no-border no-background align-items-center text-white ]"
+        aria-label="Menu"
+      >
+        <template webc:type="11ty" 11ty:type="njk">
+          {% include "icons/menu.svg" %}
+        </template>
+      </button>
+      <button
+        id="langButton"
+        class="[ flex-row ] [ no-border no-background align-items-center text-white ]"
+        aria-label="Menu"
+      >
+        <template webc:type="11ty" 11ty:type="njk">
+          {% include "icons/translate.svg" %}
+        </template>
+      </button>
+      <button
+        id="themeButton"
+        class="flex-row no-border no-background align-items-center text-white"
+        aria-label="Select theme"
+      >
+        <template webc:type="11ty" 11ty:type="njk">
+          {% include "icons/palette.svg" %}
+        </template>
+      </button>
+    </div>
+    <!-- Lang menu -->
+    <div
+      id="langMenu"
+      class="[ navbar-lang ] [ flex-column ] [ box-shadow-blur bg-primary padding-xs align-items-center ]"
+    >
+      <a
+        webc:for="link of locale_links(page.url)"
+        :href="link.url"
+        :lang="link.lang"
+        :hreflang="link.lang"
+        :aria-label="`${i18n('common.translateToLang')} ${i18n(`common.${link.lang}`)}`"
+        @text="`${ link.lang.toUpperCase() } ${ link.lang === 'es' ?  '🇲🇽' : '🇺🇸' }`"
+      >
+      </a>
+      <a
+        :href="page.url"
+        :lang="page.lang"
+        :hreflang="page.lang"
+        :aria-label="`${i18n('common.translateToLang')} ${i18n(`common.${page.lang}`)}`"
+        @text="`${page.lang.toUpperCase()} ${ page.lang === 'es' ?  '🇲🇽' : '🇺🇸' }`"
+      >
+      </a>
+    </div>
+    <!-- Theme picker -->
+    <form
+      id="themeMenu" 
+      class="[ navbar-themes ] [ box-shadow-blur bg-primary padding-xs align-items-center ]"
+    >
+    <div class="flex-column gap-xs bg-white text-dark padding-xs">
+      <div class="flex-column gap-xxs align-items-center">
+        <input
+          id="mermaid"
+          type="radio"
+          name="theme"
+          checked 
+        >
+        <label for="mermaid" class="fs-sm" @text="i18n('themes.mermaid')"></label>
+      </div>
+
+      <div class="flex-column gap-xxs align-items-center">
+        <input
+          id="roqueta"
+          type="radio"
+          name="theme"
+        >
+        <label for="roqueta" class="fs-sm" @text="i18n('themes.roqueta')"></label>
+      </div>
+    </div>
+    </form>
+  </div>
+</nav>
