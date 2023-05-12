@@ -108,7 +108,7 @@ code {
   margin-block-start: calc(var(--stack) / 1.5);
 }
 
-:where(p) {
+:where(p,iframe) {
   margin-block-start: calc(var(--stack) / 1.5);
 }
 
