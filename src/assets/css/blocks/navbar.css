@@ -52,3 +52,9 @@
     justify-content: flex-end;
   }
 }
+
+@supports not selector(:has(#mermaid:checked)){
+  #themeButton, #themeMenu {
+    display: none;
+  }
+}
