@@ -1,0 +1,27 @@
+---
+layout: base.webc
+---
+
+<div class="[ wrapper ] [ flex-column ] [ gap-xs flex-grow padding-xs ]">
+  
+  <div class="fs-sm">
+    <template webc:type="11ty" 11ty:type="njk">
+      {% set currentType = page.url | split("/") | offset(2) | first %}
+      {% set translation = 'common.'+currentType %}
+      <h1>{{ translation | i18n }}</h1>
+    </template>
+    {% if currentType === 'projects' %}
+    <p>{{ 'archive.projects' | i18n }}</p>
+    {% elif currentType === 'articles' %}
+    <p>{{ 'archive.articles' | i18n }}</p>
+    {% endif %}
+  </div>
+
+  {% if currentType === 'projects' %}
+  {{ archiveGrid(type = currentType,collection = collections['projects_'+page.lang]) }}
+  {% elif currentType === 'articles' %}
+  {{ archiveGrid(type = currentType,collection = collections.articles_es) }}
+  {% endif %}
+  
+</div>
+

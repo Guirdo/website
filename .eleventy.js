@@ -60,7 +60,7 @@ module.exports = function (eleventyConfig) {
       includes: '_includes',
       layouts: '_layouts'
     },
-    markdownTemplateEngine: 'njk',
-    htmlTemplateEngine: 'njk',
+    markdownTemplateEngine: 'webc',
+    htmlTemplateEngine: 'webc',
   }
 };

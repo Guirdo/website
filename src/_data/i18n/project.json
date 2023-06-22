@@ -18,5 +18,9 @@
   "createdOn": {
     "es":"Creado el: ",
     "en":"Created on: "
+  },
+  "learnMore": {
+    "es": "Aprendes más sobre {{ project }}",
+    "en": "Learn more about {{ project }}"
   }
 }

@@ -1,0 +1,32 @@
+<div class="archive-grid gap-md">
+  <div webc:if="type === 'project'" webc:nokeep>
+    <div webc:for="project of $data.collections[tag]" webc:nokeep>
+      <project-card
+        @attributes="({
+          title: project.data.title,
+          featuredImage: project.data.featuredImage,
+          url: project.url,
+          description: project.data.description,
+          stack: project.data.stack 
+        })"
+      >
+      </project-card>
+    </div>
+  </div>
+  <div webc:else>
+    They are something else
+  </div>
+</div>
+
+<style>
+  .archive-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  @media screen and (min-width: 48rem) {
+    .archive-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>

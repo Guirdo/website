@@ -1,10 +1,8 @@
 ---
-layout: home.njk
+layout: home.webc
 title: Seb Méndez | Front-end developer
 description: I'm a front-end developer and I'm looking for an opportunity to join a great team
 ---
-
-{% from "macros/archiveGrid.njk" import archiveGrid %}
 
 <section id="about-me" class="bg-secondary">
   <div class="[ container inner-container ] [ fs-sm ]">
@@ -26,12 +24,14 @@ description: I'm a front-end developer and I'm looking for an opportunity to joi
   <div class="[ container inner-container ] [ flex-column align-items-center ] [ gap-md ]">
     <h2 class="[ mb-start-lg text-white ]">Projects</h2>
 
-    {{ 
-      archiveGrid(type = 'projects', collection = collections['promotedProjects_'+page.lang])
-    }}
+    <archive-grid
+      @type="project"
+      @tag="promotedProjects_en"
+    >
+    </archive-grid>
 
     <a
-      href="{{ "/projects/" | locale_url }}"
+      :href="locale_url('/projects/')"
       class="[ flex-row ] [ text-inherit align-items-center padding-xs bg-white justify-content-evenly mb-end-lg w-fit-content ]"
       aria-label="View more projects"
     >
@@ -50,20 +50,6 @@ description: I'm a front-end developer and I'm looking for an opportunity to joi
       </p>
     </div>
 
-    <div class="[ contact-socials ] [ gap-xs ]">
-      {% for item in social %}
-      <a
-        class="[ flex-row ] [ bg-white gap-xs text-inherit align-items-center padding-xs ]"
-        href="{{ item.url | url }}" 
-        aria-label="{{ 'social.aria' | i18n({ social: item.name }) }}"
-        target="_blank"
-      >
-        {% set icon = "icons/"+item.name+".svg" %}
-        {% set name = 'social.'+item.name %}
-        {% include icon %}
-        <span class="fs-sm">{{ name | i18n }}</span>
-      </a>
-      {% endfor %}
-    </div>
+    <contact-links></contact-links>
   </div>
 </section>
