@@ -17,3 +17,9 @@
 .article img {
   margin-inline:auto;
 }
+
+.article aside {
+  background-color: var(--secondary-light-1);
+  border-radius: 0.25rem;
+  padding:0.5rem;
+}
