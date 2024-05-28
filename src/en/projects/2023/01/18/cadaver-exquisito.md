@@ -3,7 +3,7 @@ title: "Cadaver exquisito"
 date: 2023-01-18 09:48:00 -06:00
 tags: [solidjs,personal]
 description: "A wordplay where your friends and you write a story or poem together, but you just can see the result until the end of the game"
-featuredImage: 'https://res.cloudinary.com/dyuo7wfyi/image/upload/v1716927203/website/projects/cadaver_exquisito_flghcn.web'
+featuredImage: 'https://res.cloudinary.com/dyuo7wfyi/image/upload/v1716927203/website/projects/cadaver_exquisito_flghcn.webp'
 promoted: true
 demoUrl: 'https://exquisito.guirdo.xyz/'
 repoUrl: 'https://github.com/Guirdo/cadaver-exquisito'
